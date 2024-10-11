@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acción por el Clima</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Botón para el modo nocturno -->
+    <div class="toggle-theme">
+        <button id="toggle-theme-btn" class="btn btn-custom">Modo Nocturno</button>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar fixed-top bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Inicio</a>
+            <a class="navbar-brand text-light" href="#quienes-somos">Quiénes somos</a>
+            <a class="navbar-brand text-light" href="#sabias-que">Sabías que</a>
+            <a class="navbar-brand text-light" href="#que-pensamos">Qué pensamos</a>
+            <a class="navbar-brand text-light" href="#te-preguntamos">Te preguntamos</a>
+            <button class="btn btn-outline-light ms-2" data-bs-toggle="modal" data-bs-target="#modalNuestroFin">Nuestro Fin</button>
+        </div>
+    </nav>
+
+    <!-- Sección #1: Carrusel -->
+    <section id="inicio" class="section-1">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="hero1.PNG" class="d-block w-100 rounded" alt="Slide 1">
+                        <div class="carousel-caption">
+                            <h5>Te preguntamos</h5>
+                            <p>A través de esta encuesta, buscamos conocer cuánto sabes sobre el cambio climático y que acciones estás tomando para ayudar al planeta.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="hero2.PNG" class="d-block w-100 rounded" alt="Slide 2">
+                        <div class="carousel-caption">
+                            <h5>Conoce nuestro plan</h5>
+                            <p>El siguiente video te dará una base de nuestro plan y pensamientos acerca de nuestro sitio web y nuestro plan de acción.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="hero3.png" class="d-block w-100 rounded" alt="Slide 3">
+                        <div class="carousel-caption">
+                            <h5>Datos Interesantes</h5>
+                            <p>Entérate de contenidos interesantes que te serán útiles para tu día a día. Además, infórmate acerca del cambio.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección #2: Quiénes Somos con tarjetas -->
+    <section id="quienes-somos" class="section-2">
+        <div class="container">
+            <h2>Quiénes Somos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card rounded">
+                        <img src="hero4.png" class="card-img-top rounded" alt="Persona 1">
+                        <div class="card-body">
+                            <p class="card-text">Marco Nurena Asencio, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="hero4.png" class="card-img-top" alt="Persona 2">
+                        <div class="card-body">
+                            <p class="card-text">Mauricio Brad Wilson, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="hero4.png" class="card-img-top" alt="Persona 3">
+                        <div class="card-body">
+                            <p class="card-text">Felix Diaz Bernabe, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="GRISSELfoto.jpeg" class="card-img-top" alt="Persona 4">
+                        <div class="card-body">
+                            <p class="card-text">Grissel LLican Correa, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="RENEfoto.jpeg" class="card-img-top" alt="Persona 5">
+                        <div class="card-body">
+                            <p class="card-text">Josefina Grado Reyes, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="ANDERfoto.jpeg" class="card-img-top" alt="Persona 6">
+                        <div class="card-body">
+                            <p class="card-text">Anderson Guevara Benites, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección #3: Sabías que -->
+    <section id="sabias-que" class="section-3">
+        <div class="container">
+            <h2>Sabías que</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Las pérdidas:</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Las emergencias:</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">En la agricultura:</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Migración y desplazamientos forzados por el cambio climático:</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Las pérdidas:</h4>
+                        <p>El Perú alberga el 71% de los glaciares tropicales del mundo. En los últimos 35 años, se ha perdido el 22% de ellos.</p>
+                        <h4 id="list-item-2">Las emergencias:</h4>
+                        <p>Las emergencias por fenómenos naturales aumentaron 6 veces en la última década, siendo el 72% causadas por el cambio climático.</p>
+                        <h4 id="list-item-3">En la agricultura:</h4>
+                        <p>El 81% de la producción agrícola es vulnerable a sequías, y 21 de las 25 regiones enfrentan riesgos críticos.</p>
+                        <h4 id="list-item-4">Migración y desplazamientos forzados por el cambio climático:</h4>
+                        <p>Se proyecta que para 2050, entre 143 y 200 millones de personas migrarán a causa del cambio climático.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección #4: Qué Pensamos -->
+    <section id="que-pensamos" class="section-4">
+        <div class="container text-center">
+            <h2>Qué pensamos</h2>
+            <div class="video-wrapper">
+                <video width="800" height="400" controls class="rounded hover-effect">
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <!-- Formulario para comentarios -->
+            <form>
+                <textarea rows="5" cols="50" class="form-control mb-3" placeholder="Deja tu comentario"></textarea>
+                <input type="submit" class="btn btn-custom" value="Enviar comentario">
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección #5: Te Preguntamos -->
+    <section id="te-preguntamos" class="section-5">
+        <div class="container">
+            <h2>Te preguntamos</h2>
+            <div class="card">
+                <div class="card-header">Encuesta</div>
+                <div class="card-body">
+                    <h5 class="card-title">Jóvenes en Acción por el Clima: Tus Ideas, Tu Impacto</h5>
+                    <p class="card-text">A través de esta encuesta, buscamos conocer cuánto sabes sobre el cambio climático y que acciones estás tomando para ayudar al planeta.</p>
+                    <a href="https://forms.gle/VfQGjNkYfD3mSv348" class="btn btn-primary">Ir a la encuesta.</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección #6: Estadísticas -->
+    <section id="estadisticas" class="section-6">
+        <div class="container">
+            <h2>Estadísticas sobre el Cambio Climático</h2>
+            <div class="row">
+                <!-- Gráfico 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="hero10.jpg" class="card-img-top" alt="Gráfico 1">
+                        <div class="card-body">
+                            <p class="card-text">Estadística 1: Información interesante sobre el cambio climático.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gráfico 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="hero9.jpg" class="card-img-top" alt="Gráfico 2">
+                        <div class="card-body">
+                            <p class="card-text">Estadística 2: Otro dato relevante sobre acciones climáticas.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gráfico 3 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="hero8.jpg" class="card-img-top" alt="Gráfico 3">
+                        <div class="card-body">
+                            <p class="card-text">Estadística 3: Resultados de la encuesta sobre la conciencia climática.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gráfico 4 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="hero7.jpg" class="card-img-top" alt="Gráfico 4">
+                        <div class="card-body">
+                            <p class="card-text">Estadística 4: Datos sobre la participación juvenil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráfico 5 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="hero5.jpg" class="card-img-top" alt="Gráfico 5">
+                        <div class="card-body">
+                            <p class="card-text">Estadística 5: Datos sobre la participación juvenil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráfico 6 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="heo6.jpg" class="card-img-top" alt="Gráfico 6">
+                        <div class="card-body">
+                            <p class="card-text">Estadística 6: Datos sobre la participación juvenil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Qué te gustaría compartir sobre tus experiencias relacionadas con el cambio climático?</h5>
+                            <p class="card-text">Las respuestas reflejan un interés creciente en tomar medidas frente al cambio climático, aunque algunas personas admiten que aún no han implementado acciones concretas. Muchos se centran en pequeños gestos, como plantar árboles o apagar luces, mientras que otros han participado en actividades comunitarias como la limpieza de playas. Además, se percibe un deseo de compartir soluciones y crear conciencia sobre el impacto del cambio climático, reconociendo que tanto la tecnología como la educación juegan un papel crucial. A pesar de esto, algunos mencionan que han tenido pocas experiencias directas, pero están motivados a mejorar en el futuro. La variabilidad del clima en ciertas regiones, como la selva, también destaca la importancia de estar preparados para los cambios ambientales.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Información 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Qué obstáculos enfrenta para hábitos mas sostenibles?</h5>
+                            <p class="card-text">Los principales obstáculos identificados para adoptar hábitos más sostenibles incluyen la falta de información y conocimiento sobre el tema, la resistencia al cambio, y la falta de apoyo de la sociedad. Otros obstáculos comunes son los costos elevados de alternativas sostenibles, la falta de incentivos, y presiones culturales que dificultan la transición. También se mencionan factores personales como la pereza, la falta de constancia y la falta de tiempo. Algunas personas consideran que no enfrentan ningún obstáculo, aunque destacan la influencia negativa de la sociedad en general.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Información 3 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Qué importancia tiene para ti la educación sobre el cambio climático?</h5>
+                            <p class="card-text">Las respuestas muestran un fuerte consenso sobre la gran importancia de la educación sobre el cambio climático. Las personas consideran que es crucial para crear conciencia, empoderar a las generaciones futuras y fomentar acciones que ayuden a mitigar el impacto ambiental. Muchos destacan que es esencial para entender mejor los problemas ambientales, prepararse para desastres naturales y contribuir a la sostenibilidad. La educación también se percibe como una herramienta clave para motivar a la acción colectiva y cuidar el planeta, lo que refleja un alto nivel de preocupación y responsabilidad hacia el medio ambiente.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Información 4 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuáles son tus fuentes de información sobre el cambio climático? (Ej.: redes sociales, sitios web).</h5>
+                            <p class="card-text">La mayoría menciona las redes sociales, especialmente TikTok e Instagram, como su principal fuente de información sobre el cambio climático. Otras personas también recurren a medios tradicionales como la televisión y los periódicos. Esto muestra una mezcla entre el consumo de información rápida en redes y la confianza en medios más formales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">Acción Ambiental</div>
+                <div class="footer-links">
+                    <a href="#">Inicio</a>
+                    <a href="#">Proyectos</a>
+                    <a href="#">Contacto</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+            <div class="footer-subscribe">
+                <h4>Recibe información</h4>
+                <form action="#">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Acción Ambiental. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    <!-- Modal: Nuestro Fin -->
+    <div class="modal fade" id="modalNuestroFin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuestro Fin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    El fin de nuestra página es hacer que las personas tomen conciencia acerca del cambio climático...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Archivos JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+:root {
+    --color1: #b3e5fc;  /* Azul cielo */
+    --color2: #ffccbc;  /* Arena suave */
+    --color3: #e1f5fe;  /* Azul agua muy claro */
+    --color4: #ffd180;  /* Amarillo arena */
+    --color5: #4fc3f7;  /* Azul océano */
+    --color6: #81d4fa;  /* Azul turquesa */
+    --color7: #0288d1;  /* Azul profundo */
+    --color8: #ffffff;  /* Blanco */
+    --color9: #37474f;  /* Azul grisáceo oscuro */
+    --color10: #263238; /* Gris oscuro */
+
+    /* Colores del modo nocturno */
+    --dark-bg: #121212;
+    --dark-text: #e0e0e0;
+    --dark-card-bg: #1e1e1e;
+    --dark-btn-bg: #37474f;
+}
+
+/* Estilo para los elementos h5 */
+h5 {
+    font-size: 1.75rem;    /* Aumenta el tamaño */
+    font-weight: bold;     /* Negrita */
+    margin-top: 20px;      /* Espacio arriba */
+    margin-bottom: 20px;   /* Espacio abajo */
+    text-align: left;
+    color: var(--color9);  /* Texto gris oscuro */
+    padding: 10px 15px;
+    border-radius: 10px;   /* Bordes redondeados */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo del cuadro en el carrusel */
+.carousel-caption {
+    padding: 20px;
+    border-radius: 10px;
+    color: black; /* Color del texto en negro */
+}
+
+/* Botones generales con fondo azul turquesa */
+.btn-custom, .cta-btn, .comentarios button, .preguntas button, .boton-final {
+    background-color: var(--color6);  /* Fondo azul turquesa */
+    color: var(--color8);  /* Blanco */
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-custom:hover, .cta-btn:hover, .comentarios button:hover, .preguntas button:hover, .boton-final:hover {
+    background-color: var(--color7);  /* Azul profundo */
+    transform: scale(1.05);
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color3);  /* Azul agua muy claro */
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color6);  /* Azul turquesa */
+    color: var(--color8);  /* Blanco */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: var(--color7);  /* Azul profundo */
+}
+
+.navbar a {
+    color: var(--color8);  /* Blanco */
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    background-color: var(--color2);  /* Arena suave */
+}
+
+.navbar .btn-outline-light {
+    border-color: var(--color8);  /* Blanco */
+    color: var(--color8);
+}
+
+/* Secciones con degradados */
+.section-1 {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, var(--color1), var(--color2)); /* Celeste pastel a arena suave */
+}
+
+.section-2 {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, var(--color2), var(--color4)); /* Verde suave a amarillo pálido */
+}
+
+.section-3 {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, var(--color4), var(--color5)); /* Amarillo pálido a lavanda suave */
+}
+
+.section-4 {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, var(--color5), var(--color3)); /* Lavanda suave a gris claro */
+}
+
+.section-5 {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, var(--color3), var(--color6)); /* Gris claro a verde medio */
+}
+
+/* Estilo del video */
+.video-wrapper video {
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.video-wrapper video:hover {
+    transform: scale(1.05);
+}
+
+/* Footer con diseño de líneas y columnas */
+footer {
+    background-color: var(--color6);  /* Azul turquesa */
+    color: var(--color8);  /* Blanco */
+    padding: 20px 40px;  /* Espacio vertical y horizontal */
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 columnas de igual ancho */
+    gap: 20px;  /* Espacio entre columnas */
+    align-items: start; /* Alineación del contenido al inicio */
+    text-align: left;  /* Alineación del contenido a la izquierda */
+    width: 100%;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio entre el logo y los enlaces */
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Espacio entre los enlaces */
+}
+
+.footer-links a {
+    color: var(--color8);  /* Blanco */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de suscripción al newsletter */
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Alinear el contenido a la izquierda */
+}
+
+.footer-subscribe h4 {
+    margin-bottom: 10px;
+}
+
+.footer-subscribe form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Hacer que el formulario use el 100% de su contenedor */
+}
+
+/* Ajustes en el campo de entrada y el botón */
+.footer-subscribe input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo */
+}
+
+.footer-subscribe button {
+    padding: 10px; /* Ajustado a 10px para que coincida con el padding del input */
+    background-color: var(--color7);  /* Azul profundo */
+    color: var(--color8);  /* Blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ancho completo para que coincida con el input */
+    max-width: 400px; /* Ancho máximo para que coincida con el input */
+}
+
+.footer-subscribe button:hover {
+    background-color: var(--color5);  /* Azul océano */
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    grid-column: span 2;  /* Ocupa ambas columnas */
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);  /* Línea separadora */
+}
+
+/* Modo nocturno */
+body.dark-mode {
+    background-color: var(--dark-bg);  /* Fondo oscuro */
+    color: var(--dark-text);  /* Texto claro */
+}
+
+.card.dark-mode {
+    background-color: var(--dark-card-bg);  /* Fondo oscuro de tarjeta */
+}
+
+.navbar.dark-mode {
+    background-color: var(--dark-btn-bg);  /* Fondo oscuro de navbar */
+}
+
+footer.dark-mode {
+    background-color: var(--dark-btn-bg);  /* Fondo oscuro de footer */
+    color: var(--dark-text);  /* Texto claro */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .quienes-somos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quienes-somos .persona {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .sabias-que {
+        flex-direction: column;
+    }
+
+    .sabias-que .lista {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .boton-final {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para las tarjetas */
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Scrollspy */
+.scrollspy-example {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+}
