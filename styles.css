@@ -340,3 +340,74 @@ footer.dark-mode {
     line-height: 1.5;
 }
 
+#section-8 {
+    background-color: #f0f9ff;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.testimonio-container {
+    text-align: center;
+}
+
+.testimonio-title {
+    color: #007acc;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.persona-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.persona-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.persona-details p {
+    margin: 0;
+    color: #333;
+}
+
+.testimonio-content {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.testimonio-content h3 {
+    color: #007acc;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.testimonio-content p {
+    margin: 5px 0;
+    color: #444;
+}
+
+.insights {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.insights h3 {
+    color: #00796b;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.insights p {
+    color: #00695c;
+    margin: 0;
+}
