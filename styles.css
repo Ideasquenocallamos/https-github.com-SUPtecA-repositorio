@@ -293,3 +293,7 @@ footer.dark-mode {
             font-size: 32px;
             font-weight: bold;
         }
+        .carousel-item {
+            text-align: center;
+        }
+    </style>
