@@ -341,12 +341,14 @@ footer.dark-mode {
 }
 
 #section-8 {
-    background-color: #f0f9ff;
+    background-color: #ffffff;
     padding: 20px;
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
+    color: #333;
 }
 
 .testimonio-container {
@@ -357,6 +359,7 @@ footer.dark-mode {
     color: #007acc;
     font-size: 24px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .persona-info {
@@ -364,50 +367,59 @@ footer.dark-mode {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .persona-img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #007acc;
 }
 
 .persona-details p {
     margin: 0;
-    color: #333;
+    font-size: 16px;
 }
 
 .testimonio-content {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
 }
 
 .testimonio-content h3 {
     color: #007acc;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .testimonio-content p {
     margin: 5px 0;
-    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .insights {
-    background-color: #e0f7fa;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #f0f9ff;
+    padding: 15px;
+    border-radius: 8px;
     margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 122, 204, 0.2);
 }
 
 .insights h3 {
     color: #00796b;
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .insights p {
     color: #00695c;
+    font-size: 14px;
     margin: 0;
 }
+
