@@ -281,5 +281,11 @@ footer.dark-mode {
     height: 400px;
     overflow: auto;
 }
-     
+
+/* Estilo opcional para asegurar que los videos se ajusten al contenedor */
+.section-7 iframe {
+    width: 100%;
+    height: 100%;
+}
+
 
