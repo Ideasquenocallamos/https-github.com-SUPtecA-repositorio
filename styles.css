@@ -1,307 +1,223 @@
-/* =========================
-   VARIABLES CSS
-   ========================= */
+/* Estilos basados en Bootstrap, con un tema de clima y paleta de colores reducida */
 :root {
-    --black-pure: #000000; /* Fondo principal */
-    --orange-pure: #FF5722; /* Color para botones y cuadros */
-    --beige-soft: #F5E1B0; /* Color suave para textos */
-    --light-brown: #D7B49B; /* Color para tarjetas */
-    --soft-green: #A8D5BA; /* Color para hover y elementos destacados */
-    --soft-blue: #B0E0E6; /* Color adicional para detalles */
+    /* Colores base */
+    --color1: #87CEEB;       /* Celeste pastel */
+    --color2: #FFDAB9;       /* Arena suave (Peach Puff) */
+    --color3: #E0FFFF;       /* Azul agua muy claro */
+    --color4: #98FB98;       /* Verde suave */
+    --color5: #FFF0F5;       /* Lavanda suave */
+    --color6: #40E0D0;       /* Azul turquesa */
+    --color7: #4682B4;       /* Azul profundo */
+    --color8: #FFFFFF;       /* Blanco */
+    --color9: #2A2A2A;       /* Azul negro suave para texto */
+
+    /* Colores adicionales para temas crema */
+    --cream1: #FFF5E1;       /* Crema suave */
+    --cream2: #FFE4B5;       /* Crema más oscura (Moccasin) */
+    --cream3: #FAF0E6;       /* Lino, un tono crema neutro */
+    --cream4: #FFF8DC;       /* Maíz cremoso (Cornsilk) */
+
+    /* Colores modo oscuro */
+    --dark-bg: #2F4F4F;          /* Fondo oscuro */
+    --dark-text: #E6F7FF;        /* Texto claro */
+    --dark-card-bg: #333333;     /* Fondo oscuro de tarjeta */
+    --dark-btn-bg: #5F9EA0;      /* Fondo oscuro de botón y navbar */
 }
 
-/* =========================
-   ESTILOS GENERALES
-   ========================= */
+/* Estilo para los elementos h5 */
+h5 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: left;
+    color: var(--color9);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del cuadro en el carrusel */
+.carousel-caption {
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+}
+
+/* Botones generales con fondo azul turquesa */
+.btn-custom, .cta-btn, .comentarios button, .preguntas button, .boton-final {
+    background-color: var(--color6);
+    color: var(--color8);
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.btn-custom:hover, .cta-btn:hover, .comentarios button:hover, .preguntas button:hover, .boton-final:hover {
+    background-color: var(--color7);
+    transform: scale(1.05);
+}
+
+/* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--black-pure);
-    color: var(--beige-soft);
+    background-color: var(--color3);
 }
 
-/* =========================
-   SECCIONES GENERALES
-   ========================= */
-.section {
-    padding: 40px 0; /* Espaciado vertical */
-    margin: 20px 0; /* Espaciado entre secciones */
+/* Encabezado */
+header {
+    background-color: var(--color6);
+    color: var(--color8);
+    padding: 10px;
+    text-align: center;
 }
 
-/* =========================
-   NAVEGACIÓN
-   ========================= */
+/* Barra de navegación */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--black-pure);
-    padding: 15px 20px;
-    border-bottom: 2px solid var(--orange-pure);
+    background-color: var(--color7);
 }
-
 .navbar a {
-    color: var(--beige-soft);
+    color: var(--color8);
+    padding: 15px;
     text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
 }
-
 .navbar a:hover {
-    background-color: var(--orange-pure);
+    background-color: var(--color2);
+}
+.navbar .btn-outline-light {
+    border-color: var(--color8);
+    color: var(--color8);
 }
 
-/* =========================
-   SECCIÓN 1: CARRUSEL
-   ========================= */
-.section-1 {
-    background-color: var(--soft-blue); /* Color de fondo para la sección */
+/* Secciones con degradados */
+.section-1 { padding: 100px 0; background: linear-gradient(to bottom, var(--color1), var(--color2)); }
+.section-2 { padding: 80px 0; background: linear-gradient(to bottom, var(--color2), var(--color4)); }
+.section-3 { padding: 80px 0; background: linear-gradient(to bottom, var(--color4), var(--color5)); }
+.section-4 { padding: 80px 0; background: linear-gradient(to bottom, var(--color5), var(--color3)); }
+.section-5 { padding: 80px 0; background: linear-gradient(to bottom, var(--color3), var(--color6)); }
+
+/* Estilo del video */
+.video-wrapper video {
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+.video-wrapper video:hover {
+    transform: scale(1.05);
 }
 
-.carousel {
-    position: relative; /* Posición relativa para el carrusel */
-    overflow: hidden; /* Ocultar contenido que se desborda */
-}
-
-.carousel-inner {
-    display: flex; /* Usar flexbox para alinear los elementos */
-    transition: transform 0.5s ease; /* Transición suave para el movimiento */
-}
-
-.carousel-item {
-    min-width: 100%; /* Cada elemento ocupa el 100% del ancho */
-    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
-}
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
-    border-radius: 5px;
-    padding: 10px; /* Espaciado interno */
-}
-
-/* =========================
-   SECCIÓN 2: QUIÉNES SOMOS
-   ========================= */
-.section-2 {
-    background-color: var(--light-brown); /* Color de fondo para la sección */
-    text-align: center;
-}
-
-.card {
-    background-color: var(--beige-soft);
-    border: 1px solid var(--orange-pure);
-    border-radius: 10px;
-    transition: transform 0.3s;
-    width: 200px; /* Ancho fijo para los cuadros */
-    height: 150px; /* Altura fija para los cuadros */
-    margin: 10px; /* Margen para separación */
-    display: flex;
-    align-items: center; /* Centrar contenido verticalmente */
-    justify-content: center; /* Centrar contenido horizontalmente */
-}
-
-.card:hover {
-    transform: scale(1.05); /* Efecto de hover */
-}
-
-/* =========================
-   SECCIÓN 3: SABÍAS QUE
-   ========================= */
-.section-3 {
-    background-color: var(--soft-green); /* Color de fondo para la sección */
-}
-
-.list-group-item {
-    background-color: var(--black-pure);
-    color: var(--beige-soft);
-    border: 1px solid var(--orange-pure);
-}
-
-.list-group-item:hover {
-    background-color: var(--orange-pure);
-}
-
-/* =========================
-   SECCIÓN 4: QUÉ PENSAMOS
-   ========================= */
-.section-4 {
-    background-color: var(--soft-blue); /* Color de fondo para la sección */
-    text-align: center;
-}
-
-.video-wrapper {
-    margin: 20px 0;
-}
-
-.video-wrapper iframe {
-    width: 100%; /* Ancho completo */
-    height: auto; /* Altura automática */
-    border : none; /* Sin borde */
-    border-radius: 10px; /* Bordes redondeados */
-}
-
-.form-control {
-    background-color: var(--black-pure);
-    color: var(--beige-soft);
-    border: 1px solid var(--orange-pure);
-}
-
-/* =========================
-   SECCIÓN 5: TE PREGUNTAMOS
-   ========================= */
-.section-5 {
-    background-color: var(--light-brown); /* Color de fondo para la sección */
-}
-
-/* =========================
-   SECCIÓN 6: ESTADÍSTICAS
-   ========================= */
-.section-6 {
-    background-color: var(--soft-green); /* Color de fondo para la sección */
-    display: flex;
-    justify-content: space-around; /* Espaciado entre elementos */
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
-}
-
-/* =========================
-   SECCIÓN 7: TESTIMONIOS
-   ========================= */
-.testimonio {
-    background-color: var(--light-brown); /* Color de fondo para la sección */
-    padding: 40px 0; /* Espaciado vertical */
-    display: flex;
-    justify-content: center; /* Centrar contenido */
-}
-
-.testimonio-container {
-    background-color: var(--beige-soft); /* Color de fondo para el contenedor */
-    border: 1px solid var(--orange-pure); /* Borde */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    width: 80%; /* Ancho del contenedor */
-    max-width: 600px; /* Ancho máximo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-}
-
-.testimonio-title {
-    color: var(--orange-pure); /* Color del título */
-    font-size: 1.5em; /* Tamaño de fuente */
-    margin-bottom: 10px; /* Margen inferior */
-}
-
-.testimonio-content {
-    font-size: 1em; /* Tamaño de fuente */
-    line-height: 1.5; /* Altura de línea */
-    color: var(--black-pure); /* Color del texto */
-}
-
-.persona-info {
-    display: flex; /* Usar flexbox para alinear */
-    align-items: center; /* Centrar verticalmente */
-    margin-bottom: 20px; /* Margen inferior */
-}
-
-.persona-img {
-    border-radius: 50%; /* Imagen circular */
-    margin-right: 15px; /* Margen derecho */
-    width: 50px; /* Ancho de la imagen */
-    height: 50px; /* Altura de la imagen */
-}
-
-.insights {
-    margin-top: 20px; /* Margen superior */
-    font-style: italic; /* Estilo de fuente en cursiva */
-    color: var(--orange-pure); /* Color del texto */
-}
-
-/* =========================
-   FOOTER
-   ========================= */
+/* Footer con diseño de líneas y columnas */
 footer {
-    background-color: var(--black-pure); /* Color de fondo */
-    color: var(--beige-soft); /* Color del texto */
-    padding: 20px 0; /* Espaciado vertical */
-    text-align: center; /* Centrar texto */
+    background-color: var(--color6);
+    color: var(--color8);
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
 }
-
-.footer-content {
-    margin-bottom: 20px; /* Margen inferior */
+.footer-content { display: flex; flex-direction: column; justify-content: center; }
+.footer-logo { font-size: 1.5rem; font-weight: bold; margin-bottom: 10px; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: var(--color8); text-decoration: none; font-weight: bold; }
+.footer-links a:hover { text-decoration: underline; }
+.footer-subscribe { display: flex; flex-direction: column; align-items: flex-start; }
+.footer-subscribe h4 { margin-bottom: 10px; }
+.footer-subscribe form { display: flex; flex-direction: column; width: 100%; }
+.footer-subscribe input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
 }
-
-.footer-links a {
-    color: var(--beige-soft); /* Color de los enlaces */
-    margin: 0 10px; /* Margen lateral */
-    text-decoration: none; /* Sin subrayado */
+.footer-subscribe button {
+    padding: 10px;
+    background-color: var(--color7);
+    color: var(--color8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
 }
-
-.footer-links a:hover {
-    text-decoration: underline; /* Subrayar al pasar el ratón */
-}
-
+.footer-subscribe button:hover { background-color: var(--color5); }
 .footer-bottom {
-    font-size: 0.8em; /* Tamaño de fuente */
+    grid-column: span 2;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* =========================
-   IMÁGENES
-   ========================= */
-.img-responsive {
-    width: 100%; /* Ancho completo */
-    height: auto; /* Altura automática */
-    border-radius: 10px; /* Bordes redondeados */
+/* Modo nocturno */
+body.dark-mode { background-color: var(--dark-bg); color: var(--dark-text); }
+.card.dark-mode { background-color: var(--dark-card-bg); }
+.navbar.dark-mode { background-color: var(--dark-btn-bg); }
+footer.dark-mode { background-color: var(--dark-btn-bg); color: var(--dark-text); }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main { padding: 10px; }
+    .quienes-somos, .sabias-que { flex-direction: column; align-items: center; }
+    .quienes-somos .persona, .sabias-que .lista { width: 90%; margin-bottom: 20px; }
+    .boton-final { width: 100%; padding: 10px; font-size: 1rem; }
 }
 
-.img-thumbnail {
-    border: 2px solid var(--orange-pure); /* Borde */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 5px; /* Espaciado interno */
-}
+/* Estilos para las tarjetas */
+.card img { height: 200px; object-fit: cover; }
 
-/* =========================
-   MODAL
-   ========================= */
-.modal {
-    display: none; /* Ocultar por defecto */
-    position: fixed; /* Posición fija */
-    z-index: 1000; /* Z-index alto */
-    left: 0; /* Alinear a la izquierda */
-    top: 0; /* Alinear arriba */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: auto; /* overflow: auto; /* Permitir desplazamiento */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
-}
+/* Scrollspy */
+.scrollspy-example { position: relative; height: 400px; overflow: auto; }
 
-.modal-content {
-    background-color: var(--beige-soft); /* Color de fondo del modal */
-    margin: 15% auto; /* Margen superior e inferior */
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid var(--orange-pure); /* Borde */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-}
+/* Estilo opcional para videos */
+.section-7 iframe { width: 100%; height: 100%; }
 
-/* =========================
-   BOTONES
-   ========================= */
-.button {
-    background-color: var(--orange-pure); /* Color de fondo del botón */
-    color: var(--beige-soft); /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 1em; /* Tamaño de fuente */
-    cursor: pointer; /* Cambiar cursor al pasar el ratón */
-    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+/* Estilos para la Sección #8 */
+.section-8 { padding: 60px 0; background-color: #f4f4f9; }
+.section-8 .section-title { font-size: 2em; margin-bottom: 30px; text-align: center; color: #333; }
+.action-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
 }
+.action-card:hover { transform: translateY(-5px); }
 
-.button:hover {
-    background-color: var(--soft-green); /* Color de fondo al pasar el ratón */
-    transform: scale(1.05); /* Efecto de aumento */
-}
+/* Estilo general */
+body { background-color: #e6f7ff; color: #2a2a2a; font-family: 'Helvetica Neue', Arial, sans-serif; }
+header, footer { background-color: #2f4f4f; color: #e6f7ff; padding: 20px; text-align: center; }
+nav { background-color: #5f9ea0; padding: 10px; }
+.navbar-brand, .navbar-nav .nav-link { color: #ffffff; }
+.navbar-brand:hover, .navbar-nav .nav-link:hover { color: #e6f7ff; }
 
-.button:active {
-    transform: scale(0.95); /* Efecto de reducción al hacer clic */
+/* Resto de estilos */
+.card { background-color: #f8f8ff; border: 1px solid #5f9ea0; box-shadow: 0 4px 8px rgba(47, 79, 79, 0.1); border-radius: 8px; }
+table { width: 100%; background-color: #f8f8ff; border-collapse: collapse; }
+th, td { border: 1px solid #5f9ea0; padding: 10px; text-align: left; color: #2f4f4f; }
+hr { border: 1px solid #5f9ea0; }
+a { color: #4682b4; text-decoration: none; }
+a:hover { color: #2f4f4f; text-decoration: underline; }
+input, textarea, select {
+    background-color: #e6f7ff;
+    border: 1px solid #4682b4;
+    color: #2f4f4f;
+    padding: 8px;
+    border-radius: 4px;
 }
+button {
+    background-color: #4682b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover { background-color: #2f4f4f; }
