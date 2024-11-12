@@ -1,245 +1,345 @@
+/* Variables de colores y configuración root */
 :root {
-    /* Paleta de colores */
-    --color1: #e5f4e3;  /* Verde claro */
-    --color2: #cedebf;  /* Verde medio */
-    --color3: #99aa84;  /* Verde oliva suave */
-    --color4: #6e846b;  /* Verde oscuro */
-    --color5: #4a6047;  /* Verde musgo profundo */
-    --color6: #ffffff;  /* Blanco */
-    --color7: #333333;  /* Negro suave */
-    --color8: #262626;  /* Gris oscuro */
-    --color9: #7c8c6f;  /* Verde grisáceo */
-    --color10: #f7faf5; /* Fondo verde muy claro */
+    /* Paleta principal */
+    --dark-green-1: #1a2f1a;      /* Verde oscuro profundo */
+    --dark-green-2: #2c432c;      /* Verde oscuro medio */
+    --dark-green-3: #3b563b;      /* Verde oscuro claro */
+    --cream-1: #f5f5f0;           /* Crema claro */
+    --cream-2: #e8e8d5;           /* Crema medio */
+    --white: #ffffff;             /* Blanco puro */
+    
+    /* Colores de acento */
+    --accent-green: #4a6d4a;      /* Verde acento */
+    --hover-green: #557755;       /* Verde hover */
+    
+    /* Colores modo oscuro */
+    --dark-bg: #0f1a0f;           /* Fondo oscuro */
+    --dark-surface: #1a261a;      /* Superficie oscura */
+    --dark-text: #e0e0e0;         /* Texto claro */
 
-    /* Colores del modo nocturno */
-    --dark-bg: #121212;
-    --dark-text: #e0e0e0;
-    --dark-card-bg: #1e1e1e;
-    --dark-btn-bg: #4a6047;
+    /* Colores adicionales */
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo para los elementos h5 */
-h5 {
-    font-size: 1.75rem;    /* Aumenta el tamaño */
-    font-weight: bold;     /* Negrita */
-    margin-top: 20px;      /* Espacio arriba */
-    margin-bottom: 20px;   /* Espacio abajo */
-    text-align: left;
-    color: var(--color9);  /* Texto gris oscuro */
-    padding: 10px 15px;
-    border-radius: 10px;   /* Bordes redondeados */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-
-/* Estilo del cuadro en el carrusel */
-.carousel-caption {
-    padding: 20px;
-    border-radius: 10px;
-    color: black; /* Color del texto en negro */
-}
-
-/* Botones generales con fondo azul turquesa */
-.btn-custom, .cta-btn, .comentarios button, .preguntas button, .boton-final {
-    background-color: var(--color6);  /* Fondo azul turquesa */
-    color: var(--color8);  /* Blanco */
-    border-radius: 30px;
-    padding: 10px 20px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-custom:hover, .cta-btn:hover, .comentarios button:hover, .preguntas button:hover, .boton-final:hover {
-    background-color: var(--color7);  /* Azul profundo */
-    transform: scale(1.05);
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+/* Reset y estilos base */
+* {
     margin: 0;
     padding: 0;
-    background-color: var(--color3);  /* Azul agua muy claro */
+    box-sizing: border-box;
 }
 
-/* Encabezado */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-green-1);
+    color: var(--cream-1);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cream-2);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.75rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--dark-green-2);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Header y Navegación */
 header {
-    background-color: var(--color6);  /* Azul turquesa */
-    color: var(--color8);  /* Blanco */
-    padding: 10px;
+    background-color: var(--dark-green-2);
+    color: var(--cream-1);
+    padding: 1rem;
     text-align: center;
 }
 
-/* Barra de navegación */
 .navbar {
-    background-color: var(--color7);  /* Azul profundo */
+    background-color: var(--dark-green-2);
+    padding: 1rem;
 }
 
 .navbar a {
-    color: var(--color8);  /* Blanco */
-    padding: 15px;
+    color: var(--cream-1);
     text-decoration: none;
+    padding: 0.5rem 1rem;
     font-weight: bold;
     text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    background-color: var(--color2);  /* Arena suave */
+    background-color: var(--hover-green);
+    border-radius: 5px;
 }
 
 .navbar .btn-outline-light {
-    border-color: var(--color8);  /* Blanco */
-    color: var(--color8);
+    border-color: var(--cream-1);
+    color: var(--cream-1);
 }
 
 /* Secciones con degradados */
 .section-1 {
     padding: 100px 0;
-    background: linear-gradient(to bottom, var(--color1), var(--color2)); /* Celeste pastel a arena suave */
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, var(--dark-green-1), var(--dark-green-2));
 }
 
 .section-2 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color2), var(--color4)); /* Verde suave a amarillo pálido */
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, var(--dark-green-2), var(--dark-green-3));
 }
 
 .section-3 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color4), var(--color5)); /* Amarillo pálido a lavanda suave */
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, var(--dark-green-3), var(--accent-green));
 }
 
 .section-4 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color5), var(--color3)); /* Lavanda suave a gris claro */
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, var(--accent-green), var(--dark-green-2));
 }
 
 .section-5 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color3), var(--color6)); /* Gris claro a verde medio */
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, var(--dark-green-2), var(--dark-green-1));
 }
 
-/* Estilo del video */
+/* Botones */
+.btn-custom, .cta-btn, .comentarios button, .preguntas button, .boton-final {
+    background-color: var(--accent-green);
+    color: var(--cream-1);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover, .cta-btn:hover, .comentarios button:hover, 
+.preguntas button:hover, .boton-final:hover {
+    background-color: var(--hover-green);
+    transform: scale(1.05);
+}
+
+/* Carrusel */
+.carousel-caption {
+    background-color: rgba(26, 47, 26, 0.8); /* Verde oscuro con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--cream-1);
+}
+
+/* Video */
 .video-wrapper video {
     border-radius: 20px;
     transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .video-wrapper video:hover {
     transform: scale(1.05);
 }
 
-/* Footer con diseño de líneas y columnas */
+/* Cards y Action Cards */
+.card {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.action-card {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonios */
+.testimonio-container {
+    background-color: var(--dark-surface);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    color: var(--cream-1);
+    margin: 2rem 0;
+}
+
+.testimonio-title {
+    color: var(--cream-2);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.persona-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.persona-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--accent-green);
+}
+
+.insights {
+    background-color: var(--dark-green-2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Footer */
 footer {
-    background-color: var(--color6);  /* Azul turquesa */
-    color: var(--color8);  /* Blanco */
-    padding: 20px 40px;  /* Espacio vertical y horizontal */
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 columnas de igual ancho */
-    gap: 20px;  /* Espacio entre columnas */
-    align-items: start; /* Alineación del contenido al inicio */
-    text-align: left;  /* Alineación del contenido a la izquierda */
+    background-color: var(--dark-green-2);
+    color: var(--cream-1);
+    padding: 2rem;
     width: 100%;
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    box-sizing: border-box;
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: start;
 }
 
 .footer-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 10px; /* Espacio entre el logo y los enlaces */
+    margin-bottom: 1rem;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 10px;  /* Espacio entre los enlaces */
+    gap: 10px;
 }
 
 .footer-links a {
-    color: var(--color8);  /* Blanco */
+    color: var(--cream-2);
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
+    color: var(--white);
     text-decoration: underline;
 }
 
-/* Sección de suscripción al newsletter */
+/* Newsletter Subscription */
 .footer-subscribe {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* Alinear el contenido a la izquierda */
+    align-items: flex-start;
 }
 
-.footer-subscribe h4 {
-    margin-bottom: 10px;
-}
-
-.footer-subscribe form {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Hacer que el formulario use el 100% de su contenedor */
-}
-
-/* Ajustes en el campo de entrada y el botón */
 .footer-subscribe input {
     padding: 10px;
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
-    width: 100%; /* Ancho completo */
-    max-width: 400px; /* Ancho máximo */
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--dark-surface);
+    color: var(--cream-1);
 }
 
 .footer-subscribe button {
-    padding: 10px; /* Ajustado a 10px para que coincida con el padding del input */
-    background-color: var(--color7);  /* Azul profundo */
-    color: var(--color8);  /* Blanco */
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    background-color: var(--accent-green);
+    color: var(--cream-1);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Ancho completo para que coincida con el input */
-    max-width: 400px; /* Ancho máximo para que coincida con el input */
+    transition: background-color 0.3s ease;
 }
 
 .footer-subscribe button:hover {
-    background-color: var(--color5);  /* Azul océano */
+    background-color: var(--hover-green);
 }
 
-/* Parte inferior del footer */
 .footer-bottom {
-    grid-column: span 2;  /* Ocupa ambas columnas */
+    grid-column: span 2;
     text-align: center;
     font-size: 14px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);  /* Línea separadora */
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
 }
 
-/* Modo nocturno */
-body.dark-mode {
-    background-color: var(--dark-bg);  /* Fondo oscuro */
-    color: var(--dark-text);  /* Texto claro */
+/* Scrollspy */
+.scrollspy-example {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    background-color: var(--dark-surface);
+    border-radius: 10px;
+    padding: 1rem;
 }
 
-.card.dark-mode {
-    background-color: var(--dark-card-bg);  /* Fondo oscuro de tarjeta */
+/* Dark Mode Specific */
+.dark-mode {
+    background-color: var(--dark-bg);
 }
 
-.navbar.dark-mode {
-    background-color: var(--dark-btn-bg);  /* Fondo oscuro de navbar */
+.dark-mode .card,
+.dark-mode .action-card,
+.dark-mode .testimonio-container {
+    background-color: var(--dark-surface);
 }
 
-footer.dark-mode {
-    background-color: var(--dark-btn-bg);  /* Fondo oscuro de footer */
-    color: var(--dark-text);  /* Texto claro */
+.dark-mode .navbar,
+.dark-mode footer {
+    background-color: var(--dark-green-2);
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
     main {
         padding: 10px;
     }
@@ -268,189 +368,34 @@ footer.dark-mode {
         padding: 10px;
         font-size: 1rem;
     }
+
+    h5 {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
 }
 
-/* Estilos para las tarjetas */
-.card img {
-    height: 200px;
-    object-fit: cover;
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* Scrollspy */
-.scrollspy-example {
-    position: relative;
-    height: 400px;
-    overflow: auto;
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
 }
 
-/* Estilo opcional para asegurar que los videos se ajusten al contenedor */
-.section-7 iframe {
-    width: 100%;
-    height: 100%;
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-/* Estilos para la Sección #8 */
-.section-8 {
-    padding: 60px 0;
-    background-color: #f4f4f9;
-}
-
-.section-8 .section-title {
-    font-size: 2em;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #333;
-}
-
-.action-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.action-card:hover {
-    transform: translateY(-5px);
-}
-
-.action-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-img {
-    width: 100%;
-    height: auto;
-}
-
-.action-content h5 {
-    font-size: 1.25em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.action-content p {
-    font-size: 0.95em;
-    color: #555;
-    line-height: 1.5;
-}
-
-#section-8 {
-    background-color: #ffffff;
-    padding: 20px;
-    max-width: 500px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.testimonio-container {
-    text-align: center;
-}
-
-.testimonio-title {
-    color: #007acc;
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.persona-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.persona-img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    border: 2px solid #007acc;
-}
-
-.persona-details p {
-    margin: 0;
-    font-size: 16px;
-}
-
-.testimonio-content {
-    text-align: left;
-    margin-top: 10px;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 15px;
-}
-
-.testimonio-content h3 {
-    color: #007acc;
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.testimonio-content p {
-    margin: 5px 0;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.insights {
-    background-color: #f0f9ff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0, 122, 204, 0.2);
-}
-
-.insights h3 {
-    color: #00796b;
-    font-size: 16px;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.insights p {
-    color: #00695c;
-    font-size: 14px;
-    margin: 0;
-}
-
-/* Secciones con degradados */
-.section-1 {
-    padding: 100px 0;
-    margin-bottom: 40px; /* Espacio entre secciones */
-    background: linear-gradient(to bottom, var(--color1), var(--color2));
-}
-
-.section-2 {
-    padding: 80px 0;
-    margin-bottom: 40px;
-    background: linear-gradient(to bottom, var(--color2), var(--color4));
-}
-
-.section-3 {
-    padding: 80px 0;
-    margin-bottom: 40px;
-    background: linear-gradient(to bottom, var(--color4), var(--color5));
-}
-
-.section-4 {
-    padding: 80px 0;
-    margin-bottom: 40px;
-    background: linear-gradient(to bottom, var(--color5), var(--color3));
-}
-
-.section-5 {
-    padding: 80px 0;
-    margin-bottom: 40px;
-    background: linear-gradient(to bottom, var(--color3), var(--color6));
+.slide-in {
+    animation: slideIn 0.5s ease-out;
 }
