@@ -4,202 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acción por el Clima</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        body.dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        body.dark-theme a {
+            color: #bb86fc;
+        }
+
+        body.dark-theme .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+        }
+
+        body.dark-theme .btn-secondary {
+            background-color: #bb86fc;
+            border: none;
+        }
+
+        body.dark-theme .btn-secondary:hover {
+            background-color: #3700b3;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Botón para el modo nocturno -->
-    <div class="toggle-theme">
+    <header class="toggle-theme">
         <button id="toggle-theme-btn" class="btn btn-custom">Modo Nocturno</button>
-    </div>
+    </header>
 
-    <!-- Barra de navegación -->
-    <nav class="navbar fixed-top bg-dark navbar-expand-lg">
+    <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">Inicio</a>
-            <a class="navbar-brand text-light" href="#quienes-somos">Quiénes somos</a>
-            <a class="navbar-brand text-light" href="#sabias-que">Sabías que</a>
-            <a class="navbar-brand text-light" href="#que-pensamos">Qué pensamos</a>
-            <a class="navbar-brand text-light" href="#te-preguntamos">Te preguntamos</a>
+            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="navbar-brand" href="#quienes-somos">Quiénes somos</a>
+            <a class="navbar-brand" href="#sabias-que">Sabías que</a>
+            <a class="navbar-brand" href="#que-pensamos">Qué pensamos</a>
+            <a class="navbar-brand" href="#te-preguntamos">Te preguntamos</a>
+            <a class="navbar-brand" href="#estadisticas">Estadisticas</a>
+            <a class="navbar-brand" href="#entrevistas">Entrevistas</a>
+            <a class="navbar-brand" href="#testimonio">Testimonio</a>
+
             <button class="btn btn-outline-light ms-2" data-bs-toggle="modal" data-bs-target="#modalNuestroFin">Nuestro Fin</button>
+
+            <button id="toggle-theme-btn" class="btn btn-secondary">
+                <i class="fas fa-sun"></i> Modo Nocturno
+            </button>
         </div>
     </nav>
 
-    <!-- Sección #1: Carrusel -->
-    <section id="inicio" class="section-1">
-        <div class="container">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="hero1.PNG" class="d-block w-100 rounded" alt="Slide 1">
-                        <div class="carousel-caption">
-                            <h5>Te preguntamos</h5>
-                            <p>A través de esta encuesta, buscamos conocer cuánto sabes sobre el cambio climático y que acciones estás tomando para ayudar al planeta.</p>
+    <main>
+        <section id="inicio" class="section-1">
+            <div class="container">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="hero1.PNG" class="d-block w-100 rounded" alt="Slide 1">
+                            <div class="carousel-caption">
+                                <h5>Te preguntamos</h5>
+                                <p>A través de esta encuesta, buscamos conocer cuánto sabes sobre el cambio climático y que acciones estás tomando para ayudar al planeta.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="hero2.PNG" class="d-block w-100 rounded" alt="Slide 2">
+                            <div class="carousel-caption">
+                                <h5>Conoce nuestro plan</h5>
+                                <p>El siguiente video te dará una base de nuestro plan y pensamientos acerca de nuestro sitio web y nuestro plan de acción.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="hero3.png" class="d-block w-100 rounded" alt="Slide 3">
+                            <div class="carousel-caption">
+                                <h5>Datos Interesantes</h5>
+                                <p>Entérate de contenidos interesantes que te serán útiles para tu día a día. Además, infórmate acerca del cambio.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="hero2.PNG" class="d-block w-100 rounded" alt="Slide 2">
-                        <div class="carousel-caption">
-                            <h5>Conoce nuestro plan</h5>
-                            <p>El siguiente video te dará una base de nuestro plan y pensamientos acerca de nuestro sitio web y nuestro plan de acción.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="hero3.png" class="d-block w-100 rounded" alt="Slide 3">
-                        <div class="carousel-caption">
-                            <h5>Datos Interesantes</h5>
-                            <p>Entérate de contenidos interesantes que te serán útiles para tu día a día. Además, infórmate acerca del cambio.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección #2: Quiénes Somos con tarjetas -->
-    <section id="quienes-somos" class="section-2">
-        <div class="container">
-            <h2>Quiénes Somos</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card rounded">
-                        <img src="hero4.png" class="card-img-top rounded" alt="Persona 1">
-                        <div class="card-body">
-                            <p class="card-text">Marco Nurena Asencio, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="hero4.png" class="card-img-top" alt="Persona 2">
-                        <div class="card-body">
-                            <p class="card-text">Mauricio Brad Wilson, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="hero4.png" class="card-img-top" alt="Persona 3">
-                        <div class="card-body">
-                            <p class="card-text">Felix Diaz Bernabe, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="GRISSELfoto.jpeg" class="card-img-top" alt="Persona 4">
-                        <div class="card-body">
-                            <p class="card-text">Grissel LLican Correa, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="RENEfoto.jpeg" class="card-img-top" alt="Persona 5">
-                        <div class="card-body">
-                            <p class="card-text">Josefina Grado Reyes, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="ANDERfoto.jpeg" class="card-img-top" alt="Persona 6">
-                        <div class="card-body">
-                            <p class="card-text">Anderson Guevara Benites, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
-                        </div>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección #3: Sabías que -->
-    <section id="sabias-que" class="section-3">
-        <div class="container">
-            <h2>Sabías que</h2>
-            <div class="row">
-                <div class="col-4">
-                    <div id="list-example" class="list-group">
-                        <a class="list-group-item list-group-item-action" href="#list-item-1">Impacto en la salud:</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-2">Cambio climático en cifras:</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-3">Efectos en la agricultura:</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-4">Desastres naturales:</a>
+        <section id="quienes-somos" class="section-2">
+            <div class="container">
+                <h2>Quiénes Somos</h2>
+                <div class="row">
+                    <article class="col-md-4 mb-4">
+                        <div class="card rounded">
+                            <img src="hero4.png" class="card-img-top rounded" alt="Persona 1">
+                            <div class="card-body">
+                                <p class="card-text">Marco Nurena Asencio, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="hero4.png" class="card-img-top" alt="Persona 2">
+                            <div class="card-body">
+                                <p class="card-text">Mauricio Brad Wilson, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="hero4.png" class="card-img-top" alt="Persona 3">
+                            <div class="card-body">
+                                <p class="card-text">Felix Diaz Bernabe, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="GRISSELfoto.jpeg" class="card-img-top" alt="Persona 4">
+                            <div class="card-body">
+                                <p class="card-text">Grissel LLican Correa, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="RENEfoto.jpeg" class="card-img-top" alt="Persona 5">
+                            <div class="card-body">
+                                <p class="card-text">Josefina Grado Reyes, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="ANDERfoto.jpeg" class="card-img-top" alt="Persona 6">
+                            <div class="card-body">
+                                <p class="card-text">Anderson Guevara Benites, estudiante de Tecsup, 2do ciclo de la carrera Diseño y Desarrollo de Software.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="sabias-que" class="section-3"> 
+            <div class="container">
+                <h2>Sabías que</h2>
+                <div class="row">
+                    <aside class="col-4">
+                        <div id="list-example" class="list-group">
+                            <a class="list-group-item list-group-item-action" href="#list-item-1">Impacto en la salud mental:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-2">Crisis del agua:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-3">Efectos en la agricultura:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-4">Desplazamiento de poblaciones:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-5">Innovaciones en energías renovables:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-6">Educación y cambio climático:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-7">Deforestación y cambio climático:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-8">Biodiversidad en peligro:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-9">Políticas globales:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-10">Impacto en los océanos:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-11">Cambio climático en cifras:</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-12">Desastres naturales:</a>
+                        </div>
+                    </aside>
+                    <div class="col-8">
+                        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                            <article class="col-8">
+                                <h4 id="list-item-1"><a href="https://www.apa.org/news/press/releases/stress/2021/10/climate-change-mental-health" target="_blank">Impacto en la salud mental:</a></h4>
+                                <p>El cambio climático está generando ansiedad y estrés en las personas, afectando su salud mental y bienestar emocional.</p>
+                                
+                                <h4 id="list-item-2"><a href="https://www.wri.org/research/water-crisis" target="_blank">Crisis del agua:</a></h4>
+                                <p>El cambio climático está exacerbando la escasez de agua en muchas regiones, afectando la agricultura y la disponibilidad de agua potable.</p>
+                                
+                                <h4 id="list-item-3"><a href="https://www.fao.org/climate-change/en/" target="_blank">Efectos en la agricultura:</a></h4>
+                                <p>Se prevé que el cambio climático afecte la producción agrícola, poniendo en riesgo la seguridad alimentaria global.</p>
+                                
+                                <h4 id="list-item-4"><a href="https://www.unhcr.org/climate-change-and-displacement.html" target="_blank">Desplazamiento de poblaciones:</a></h4>
+                                <p>El aumento del nivel del mar y los desastres naturales están forzando a comunidades a desplazarse, creando "refugiados climáticos".</p>
+                                
+                                <h4 id="list-item-5"><a href="https://www.irena.org/" target="_blank">Innovaciones en energías renovables:</a></h4>
+                                <p>Las tecnologías de energía renovable están avanzando rápidamente, ofreciendo soluciones para mitigar el cambio climático.</p>
+                                
+                                <h4 id="list-item-6"><a href="https://en.unesco.org/themes/education-sustainable-development" target="_blank">Educación y cambio climático:</a></h4>
+                                <p>La educación es clave para crear conciencia sobre el cambio climático y fomentar acciones sostenibles en las comunidades.</p>
+                                
+                                <h4 id="list-item-7"><a href="https://www.worldwildlife.org/threats/deforestation-and-forest-degradation" target="_blank">Deforestación y cambio climático:</a></h4>
+                                <p>La deforestación contribuye al cambio climático al liberar carbono almacenado en los árboles, afectando el clima global.</p>
+                                
+                                <h4 id="list-item-8"><a href="https://www.cbd.int/climate/" target="_blank">Biodiversidad en peligro:</a></h4>
+                                <p>El cambio climático está provocando la extinción de especies y la pérdida de biodiversidad a un ritmo alarmante.</p>
+                                
+                                <h4 id="list-item-9"><a href="https://unfccc.int/process-and-meetings/the-paris-agreement" target="_blank">Políticas globales:</a></h4>
+                                <p>Los acuerdos internacionales, como el Acuerdo de París, son cruciales para coordinar esfuerzos globales en la lucha contra el cambio climático.</p>
+                                
+                                <h4 id="list-item-10"><a href="https://www.noaa.gov/education/resource-collections/ocean-acidification" target="_blank">Impacto en los océanos:</a></h4>
+                                <p>El cambio climático está causando la acidificación de los océanos, afectando a la vida marina y los ecosistemas.</p>
+                                
+                                <h4 id="list-item-11"><a href="https://www.minam.gob.pe/somoscop20/el-cambio-climatico-en-cifras/" target="_blank">Cambio climático en cifras:</a></h4>
+                                <p>En Perú, el 70% de la población está expuesta a la inseguridad hídrica. Esto es resultado de la reducción de los glaciares, que ha disminuido un 51% en los últimos 50 años.</p>
+                                
+                                <h4 id="list-item-12"><a href="https://www.minam.gob.pe/somoscop20/el-cambio-climatico-en-cifras/" target="_blank">Desastres naturales:</a></h4>
+                                <p>Los desastres naturales en Perú, como inundaciones y sequías, han aumentado en un 20% en los últimos años, afectando gravemente a las comunidades vulnerables.</p>
+                            </article>
+                        </div>
                     </div>
                 </div>
-                <div class="col-8">
-                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-                        <h4 id="list-item-1"><a href="https://www.who.int/es/news-room/fact-sheets/detail/climate-change-and-health" target="_blank">Impacto en la salud:</a></h4>
-                        <p>El cambio climático afecta la salud de millones de personas en Perú, aumentando la incidencia de enfermedades respiratorias y cardiovasculares debido a la contaminación y cambios en el clima.</p>
-                    
-                        <h4 id="list-item-2"><a href="https://www.minam.gob.pe/somoscop20/el-cambio-climatico-en-cifras/" target="_blank">Cambio climático en cifras:</a></h4>
-                        <p>En Perú, el 70% de la población está expuesta a la inseguridad hídrica. Esto es resultado de la reducción de los glaciares, que ha disminuido un 51% en los últimos 50 años.</p>
-                    
-                        <h4 id="list-item-3"><a href="https://www.minam.gob.pe/somoscop20/el-cambio-climatico-en-cifras/" target="_blank">Efectos en la agricultura:</a></h4>
-                        <p>Se prevé que el cambio climático podría reducir la producción de cultivos en un 40% para el año 2050, afectando la seguridad alimentaria en el país.</p>
-                    
-                        <h4 id="list-item-4"><a href="https://www.minam.gob.pe/somoscop20/el-cambio-climatico-en-cifras/" target="_blank">Desastres naturales:</a></h4>
-                        <p>Los desastres naturales en Perú, como inundaciones y sequías, han aumentado en un 20% en los últimos años, afectando gravemente a las comunidades vulnerables.</p>
+            </div>
+        </section>
+        
+
+        <section id="que-pensamos" class="section-4">
+            <div class="container text-center">
+                <h2>Qué pensamos</h2>
+                <div class="video-wrapper">
+                    <iframe width="800" height="400" src="https://www.youtube.com/embed/XIsKGRyDrDY" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded hover-effect">
+                    </iframe>
+                </div>
+                <p>En este video, compartimos nuestras reflexiones sobre la importancia de actuar frente al cambio climático y cómo cada uno de nosotros puede contribuir a un futuro más sostenible.</p>
+            </div>
+        </section>
+
+        <section id="te-preguntamos" class="section-5">
+            <div class="container">
+                <h2>Te Preguntamos</h2>
+                <p>Queremos conocer tu opinión sobre el cambio climático y las acciones que estás tomando. Por favor, completa nuestra encuesta.</p>
+                <a href="https://www.example.com/encuesta" class="btn btn-primary">Participar en la Encuesta</a>
+            </div>
+        </section>
+
+        <div class="modal fade" id="modalNuestroFin" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Nuestro Fin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El objetivo de este sitio web es crear conciencia sobre el cambio climático y fomentar acciones individuales y colectivas para combatirlo. Juntos, podemos hacer una diferencia.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-
-
-
-
-    <!-- Sección #4: Qué Pensamos -->
-    <section id="que-pensamos" class="section-4">
-        <div class="container text-center">
-            <h2>Qué pensamos</h2>
-            <div class="video-wrapper">
-                <iframe width="800" height="400" src="https://www.youtube.com/embed/XIsKGRyDrDY" 
-                    title="YouTube video player" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen class="rounded hover-effect">
-                </iframe>
-            </div>
-        <!-- Formulario para comentarios -->
-            <form>
-                <textarea rows="5" cols="50" class="form-control mb-3" placeholder="Deja tu comentario"></textarea>
-                <input type="submit" class="btn btn-custom" value="Enviar comentario">
-            </form>
-        </div>
-    </section>
-
-    <!-- Sección #5: Te Preguntamos -->
-    <section id="te-preguntamos" class="section-5">
-        <div class="container">
-            <h2>Te preguntamos</h2>
-            <div class="card">
-                <div class="card-header">Encuesta</div>
-                <div class="card-body">
-                    <h5 class="card-title">Jóvenes en Acción por el Clima: Tus Ideas, Tu Impacto</h5>
-                    <p class="card-text">A través de esta encuesta, buscamos conocer cuánto sabes sobre el cambio climático y que acciones estás tomando para ayudar al planeta.</p>
-                    <a href="https://forms.gle/VfQGjNkYfD3mSv348" class="btn btn-primary">Ir a la encuesta.</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección #6: Estadísticas -->
+        <!-- Sección #6: Estadísticas -->
     <section id="estadisticas" class="section-6">
         <div class="container">
             <h2>Estadísticas sobre el Cambio Climático</h2>
@@ -304,9 +377,9 @@
         </div>
     </section>
 
-   <section class="section-7">
+   <section id="entrevistas" class="section-7">
         <div class="container">
-            <h2 class="section-title">Entrevista</h2>
+            <h2 class="section-title">Entrevistas</h2>
             <div id="carouselVideos" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -337,7 +410,7 @@
         </div>
     </section>
 
-    <section id="section-8" class="testimonio">
+    <section id="testimonio" class="section-8">
         <div class="testimonio-container">
             <h2 class="testimonio-title">Testimonios</h2>
             <div class="persona-info">
@@ -366,50 +439,47 @@
         </div>
     </section>
 
-
-    <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <div class="footer-logo">Acción Ambiental</div>
-                <div class="footer-links">
-                    <a href="#">Inicio</a>
-                    <a href="#">Proyectos</a>
-                    <a href="#">Contacto</a>
-                    <a href="#">Política de Privacidad</a>
-                </div>
-            </div>
-            <div class="footer-subscribe">
-                <h4>Recibe información</h4>
-                <form action="#">
-                    <input type="email" placeholder="Tu correo electrónico" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Acción Ambiental. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-
-    <!-- Modal: Nuestro Fin -->
-    <div class="modal fade" id="modalNuestroFin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalNuestroFin" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Nuestro Fin</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="modalLabel">Nuestro Fin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    El fin de nuestra página es hacer que las personas tomen conciencia acerca del cambio climático...
+                    <p>El objetivo de este sitio web es crear conciencia sobre el cambio climático y fomentar acciones individuales y colectivas para combatirlo. Juntos, podemos hacer una diferencia.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Archivos JS de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+</main>
+
+<footer class="text-center py-4">
+    <div class="container">
+        <p>&copy; 2023 Acción por el Clima. Todos los derechos reservados.</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script>
+    const toggleThemeBtn = document.getElementById('toggle-theme-btn');
+        toggleThemeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                toggleThemeBtn.innerHTML = '<i class="fas fa-moon"></i> Modo Diurno';
+            } else {
+                toggleThemeBtn.innerHTML = '<i class="fas fa-sun"></i> Modo Nocturno';
+            }
+        });
+    </script>
 </body>
 </html>
