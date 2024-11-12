@@ -1,79 +1,80 @@
 :root {
-    --color1: #b3e5fc;  /* Azul cielo */
-    --color2: #ffccbc;  /* Arena suave */
-    --color3: #e1f5fe;  /* Azul agua muy claro */
-    --color4: #ffd180;  /* Amarillo arena */
-    --color5: #4fc3f7;  /* Azul océano */
-    --color6: #81d4fa;  /* Azul turquesa */
-    --color7: #0288d1;  /* Azul profundo */
-    --color8: #ffffff;  /* Blanco */
-    --color9: #37474f;  /* Azul grisáceo oscuro */
-    --color10: #263238; /* Gris oscuro */
+    /* Paleta de colores */
+    --color1: #e5f4e3;  /* Verde claro */
+    --color2: #cedebf;  /* Verde medio */
+    --color3: #99aa84;  /* Verde oliva suave */
+    --color4: #6e846b;  /* Verde oscuro */
+    --color5: #4a6047;  /* Verde musgo profundo */
+    --color6: #ffffff;  /* Blanco */
+    --color7: #333333;  /* Negro suave */
+    --color8: #262626;  /* Gris oscuro */
+    --color9: #7c8c6f;  /* Verde grisáceo */
+    --color10: #f7faf5; /* Fondo verde muy claro */
 
     /* Colores del modo nocturno */
     --dark-bg: #121212;
     --dark-text: #e0e0e0;
     --dark-card-bg: #1e1e1e;
-    --dark-btn-bg: #37474f;
+    --dark-btn-bg: #4a6047;
 }
 
-/* Estilo para los elementos h5 */
+/* Estilo para encabezados */
 h5 {
-    font-size: 1.75rem;    /* Aumenta el tamaño */
-    font-weight: bold;     /* Negrita */
-    margin-top: 20px;      /* Espacio arriba */
-    margin-bottom: 20px;   /* Espacio abajo */
-    text-align: left;
-    color: var(--color9);  /* Texto gris oscuro */
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--color7);
     padding: 10px 15px;
-    border-radius: 10px;   /* Bordes redondeados */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px;
+    background-color: var(--color10);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo del cuadro en el carrusel */
+/* Estilos para el carrusel */
 .carousel-caption {
     padding: 20px;
     border-radius: 10px;
     color: black; /* Color del texto en negro */
 }
 
-/* Botones generales con fondo azul turquesa */
+/* Botones generales */
 .btn-custom, .cta-btn, .comentarios button, .preguntas button, .boton-final {
-    background-color: var(--color6);  /* Fondo azul turquesa */
-    color: var(--color8);  /* Blanco */
+    background-color: var(--color4);
+    color: var(--color6);
     border-radius: 30px;
     padding: 10px 20px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-custom:hover, .cta-btn:hover, .comentarios button:hover, .preguntas button:hover, .boton-final:hover {
-    background-color: var(--color7);  /* Azul profundo */
+    background-color: var(--color5);
     transform: scale(1.05);
 }
 
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--color10);
+    color: var(--color8);
     margin: 0;
     padding: 0;
-    background-color: var(--color3);  /* Azul agua muy claro */
 }
 
 /* Encabezado */
 header {
-    background-color: var(--color6);  /* Azul turquesa */
-    color: var(--color8);  /* Blanco */
+    background-color: var(--color3);
+    color: var(--color6);
     padding: 10px;
     text-align: center;
 }
 
 /* Barra de navegación */
 .navbar {
-    background-color: var(--color7);  /* Azul profundo */
+    background-color: var(--color4);
 }
 
 .navbar a {
-    color: var(--color8);  /* Blanco */
+    color: var(--color6);
     padding: 15px;
     text-decoration: none;
     font-weight: bold;
@@ -81,41 +82,36 @@ header {
 }
 
 .navbar a:hover {
-    background-color: var(--color2);  /* Arena suave */
-}
-
-.navbar .btn-outline-light {
-    border-color: var(--color8);  /* Blanco */
-    color: var(--color8);
+    background-color: var(--color2);
 }
 
 /* Secciones con degradados */
 .section-1 {
     padding: 100px 0;
-    background: linear-gradient(to bottom, var(--color1), var(--color2)); /* Celeste pastel a arena suave */
+    background: linear-gradient(to bottom, var(--color1), var(--color2));
 }
 
 .section-2 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color2), var(--color4)); /* Verde suave a amarillo pálido */
+    background: linear-gradient(to bottom, var(--color2), var(--color4));
 }
 
 .section-3 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color4), var(--color5)); /* Amarillo pálido a lavanda suave */
+    background: linear-gradient(to bottom, var(--color4), var(--color5));
 }
 
 .section-4 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color5), var(--color3)); /* Lavanda suave a gris claro */
+    background: linear-gradient(to bottom, var(--color5), var(--color3));
 }
 
 .section-5 {
     padding: 80px 0;
-    background: linear-gradient(to bottom, var(--color3), var(--color6)); /* Gris claro a verde medio */
+    background: linear-gradient(to bottom, var(--color3), var(--color6));
 }
 
-/* Estilo del video */
+/* Estilo de video */
 .video-wrapper video {
     border-radius: 20px;
     transition: transform 0.3s ease;
@@ -125,53 +121,29 @@ header {
     transform: scale(1.05);
 }
 
-/* Footer con diseño de líneas y columnas */
+/* Footer */
 footer {
-    background-color: var(--color6);  /* Azul turquesa */
-    color: var(--color8);  /* Blanco */
-    padding: 20px 40px;  /* Espacio vertical y horizontal */
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 columnas de igual ancho */
-    gap: 20px;  /* Espacio entre columnas */
-    align-items: start; /* Alineación del contenido al inicio */
-    text-align: left;  /* Alineación del contenido a la izquierda */
-    width: 100%;
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.footer-content {
+    background-color: var(--color4);
+    color: var(--color6);
+    padding: 20px 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.footer-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px; /* Espacio entre el logo y los enlaces */
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;  /* Espacio entre los enlaces */
+    justify-content: space-between;
 }
 
 .footer-links a {
-    color: var(--color8);  /* Blanco */
+    color: var(--color6);
     text-decoration: none;
-    font-weight: bold;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
 }
 
-/* Sección de suscripción al newsletter */
+/* Suscripción al newsletter */
 .footer-subscribe {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* Alinear el contenido a la izquierda */
+    align-items: flex-start;
 }
 
 .footer-subscribe h4 {
@@ -181,245 +153,150 @@ footer {
 .footer-subscribe form {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Hacer que el formulario use el 100% de su contenedor */
+    width: 100%;
 }
 
-/* Ajustes en el campo de entrada y el botón */
 .footer-subscribe input {
     padding: 10px;
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
-    width: 100%; /* Ancho completo */
-    max-width: 400px; /* Ancho máximo */
+    width: 100%;
+    max-width: 400px;
 }
 
 .footer-subscribe button {
-    padding: 10px; /* Ajustado a 10px para que coincida con el padding del input */
-    background-color: var(--color7);  /* Azul profundo */
-    color: var(--color8);  /* Blanco */
+    padding: 10px;
+    background-color: var(--color7);
+    color: var(--color6);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Ancho completo para que coincida con el input */
-    max-width: 400px; /* Ancho máximo para que coincida con el input */
+    width: 100%;
+    max-width: 400px;
 }
 
 .footer-subscribe button:hover {
-    background-color: var(--color5);  /* Azul océano */
+    background-color: var(--color5);
 }
 
-/* Parte inferior del footer */
-.footer-bottom {
-    grid-column: span 2;  /* Ocupa ambas columnas */
-    text-align: center;
-    font-size: 14px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);  /* Línea separadora */
+/* Tarjetas */
+.card {
+    background-color: var(--color6);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
 }
 
-/* Modo nocturno */
-body.dark-mode {
-    background-color: var(--dark-bg);  /* Fondo oscuro */
-    color: var(--dark-text);  /* Texto claro */
-}
-
-.card.dark-mode {
-    background-color: var(--dark-card-bg);  /* Fondo oscuro de tarjeta */
-}
-
-.navbar.dark-mode {
-    background-color: var(--dark-btn-bg);  /* Fondo oscuro de navbar */
-}
-
-footer.dark-mode {
-    background-color: var(--dark-btn-bg);  /* Fondo oscuro de footer */
-    color: var(--dark-text);  /* Texto claro */
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    main {
-        padding: 10px;
-    }
-
-    .quienes-somos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .quienes-somos .persona {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .sabias-que {
-        flex-direction: column;
-    }
-
-    .sabias-que .lista {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .boton-final {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-    }
-}
-
-/* Estilos para las tarjetas */
 .card img {
     height: 200px;
     object-fit: cover;
 }
 
-/* Scrollspy */
-.scrollspy-example {
-    position: relative;
-    height: 400px;
-    overflow: auto;
-}
-
-/* Estilo opcional para asegurar que los videos se ajusten al contenedor */
-.section-7 iframe {
-    width: 100%;
-    height: 100%;
-}
-
-/* Estilos para la Sección #8 */
-.section-8 {
-    padding: 60px 0;
-    background-color: #f4f4f9;
-}
-
-.section-8 .section-title {
-    font-size: 2em;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #333;
-}
-
-.action-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.action-card:hover {
-    transform: translateY(-5px);
-}
-
-.action-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-img {
-    width: 100%;
-    height: auto;
-}
-
-.action-content h5 {
-    font-size: 1.25em;
-    color: #333;
+.card-title {
+    font-size: 1.5rem;
+    color: var(--color4);
     margin-bottom: 10px;
 }
 
-.action-content p {
-    font-size: 0.95em;
-    color: #555;
-    line-height: 1.5;
-}
-
-#section-8 {
-    background-color: #ffffff;
-    padding: 20px;
-    max-width: 500px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.testimonio-container {
-    text-align: center;
-}
-
-.testimonio-title {
-    color: #007acc;
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.persona-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.persona-img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    border: 2px solid #007acc;
-}
-
-.persona-details p {
-    margin: 0;
-    font-size: 16px;
-}
-
-.testimonio-content {
-    text-align: left;
-    margin-top: 10px;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 15px;
-}
-
-.testimonio-content h3 {
-    color: #007acc;
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.testimonio-content p {
-    margin: 5px 0;
-    font-size: 14px;
+.card-text {
+    color: var(--color8);
     line-height: 1.6;
 }
 
-.insights {
-    background-color: #f0f9ff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0, 122, 204, 0.2);
+/* Formularios */
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.insights h3 {
-    color: #00796b;
-    font-size: 16px;
-    margin-bottom: 8px;
-    font-weight: bold;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.insights p {
-    color: #00695c;
-    font-size: 14px;
-    margin: 0;
+input[type="submit"] {
+    background-color: var(--color4);
+    color: var(--color6);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+input[type="submit"]:hover {
+    background-color: var(--color5);
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 1px solid var(--color3);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color4);
+    color: var(--color6);
+}
+
+tr:nth-child(even) {
+    background-color: var(--color1);
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo nocturno */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.card.dark-mode {
+    background-color: var(--dark-card-bg);
+}
+
+.navbar.dark-mode {
+    background-color: var(--dark-btn-bg);
+}
+
+footer.dark-mode {
+    background-color: var(--dark-btn-bg);
+    color: var(--dark-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 0;
+    }
+
+    .btn-custom {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
