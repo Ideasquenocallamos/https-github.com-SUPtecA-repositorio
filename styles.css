@@ -1,593 +1,307 @@
-/* Variables de colores */
+/* =========================
+   VARIABLES CSS
+   ========================= */
 :root {
-    --orange-pure: #FF4500;      /* Naranja puro y vibrante */
-    --black-pure: #000000;       /* Negro puro */
-    --white-pure: #FFFFFF;       /* Blanco puro */
-    --orange-bright: #FF6B00;    /* Naranja brillante para hover */
-    --gray-light: #333333;       /* Gris oscuro para contraste */
+    --black-pure: #000000; /* Fondo principal */
+    --orange-pure: #FF5722; /* Color para botones y cuadros */
+    --beige-soft: #F5E1B0; /* Color suave para textos */
+    --light-brown: #D7B49B; /* Color para tarjetas */
+    --soft-green: #A8D5BA; /* Color para hover y elementos destacados */
+    --soft-blue: #B0E0E6; /* Color adicional para detalles */
 }
 
-/* Reset y estilos base */
-* {
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+body {
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif; /* Cambiado a Arial para una mejor legibilidad */
     background-color: var(--black-pure);
-    color: var(--white-pure);
-    line-height: 1.6;
-    font-size: 18px; /* Tamaño de fuente base aumentado */
+    color: var(--beige-soft);
 }
 
-/* Contenedor principal */
-.container {
-    max-width: 1200px; /* Cambiado a max-width para una mejor responsividad */
-    margin: 0 auto;
-    padding: 0 20px;
+/* =========================
+   SECCIONES GENERALES
+   ========================= */
+.section {
+    padding: 40px 0; /* Espaciado vertical */
+    margin: 20px 0; /* Espaciado entre secciones */
 }
 
-/* Header y Navegación */
-header {
-    background-color: var(--black-pure);
-    padding: 20px 0; /* Reducido padding */
-    border-bottom: 4px solid var(--orange-pure);
-}
-
+/* =========================
+   NAVEGACIÓN
+   ========================= */
 .navbar {
-    background-color: var(--orange-pure);
-    height: 60px;
     display: flex;
-    justify-content: space-between; /* Cambiado a space-between */
+    justify-content: space-between;
     align-items: center;
+    background-color: var(--black-pure);
+    padding: 15px 20px;
+    border-bottom: 2px solid var(--orange-pure);
 }
 
 .navbar a {
-    color: var(--white-pure);
+    color: var(--beige-soft);
     text-decoration: none;
-    font-size: 18px; /* Tamaño de fuente aumentado */
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 15px 20px; /* Ajustado para un mejor espaciado */
+    padding: 10px 15px;
     transition: background-color 0.3s;
 }
 
 .navbar a:hover {
-    background-color: var(--black-pure);
+    background-color: var(--orange-pure);
 }
 
-/* Secciones */
-.section {
-    padding: 60px 0; /* Ajustado para un mejor espaciado */
-    background-color: var(--black-pure);
+/* =========================
+   SECCIÓN 1: CARRUSEL
+   ========================= */
+.section-1 {
+    background-color: var(--soft-blue); /* Color de fondo para la sección */
 }
 
-.section:nth-child(even) {
-    background-color: var(--gray-light);
+.carousel {
+    position: relative; /* Posición relativa para el carrusel */
+    overflow: hidden; /* Ocultar contenido que se desborda */
 }
 
-/* Grid de contenido */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsivo */
-    gap: 30px;
-    padding: 40px 0;
+.carousel-inner {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
 }
 
-/* Cards */
-.card {
-    background-color: var(--black-pure);
-    border: 2px solid var(--orange-pure);
-    padding: 20px; /* Ajustado para un mejor espaciado */
+.carousel-item {
+    min-width: 100%; /* Cada elemento ocupa el 100% del ancho */
+    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
+    border-radius: 5px;
+    padding: 10px; /* Espaciado interno */
+}
+
+/* =========================
+   SECCIÓN 2: QUIÉNES SOMOS
+   ========================= */
+.section-2 {
+    background-color: var(--light-brown); /* Color de fondo para la sección */
     text-align: center;
-    transition: transform 0.3s;
 }
 
-.card img {
-    max-width: 100%; /* Asegura que las imágenes no excedan el tamaño de la tarjeta */
-    height: auto; /* Mantiene la proporción de las imágenes */
+.card {
+    background-color: var(--beige-soft);
+    border: 1px solid var(--orange-pure);
+    border-radius: 10px;
+    transition: transform 0.3s;
+    width: 200px; /* Ancho fijo para los cuadros */
+    height: 150px; /* Altura fija para los cuadros */
+    margin: 10px; /* Margen para separación */
+    display: flex;
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efecto de elevación más sutil */
+    transform: scale(1.05); /* Efecto de hover */
 }
 
-/* Botones */
-.btn {
+/* =========================
+   SECCIÓN 3: SABÍAS QUE
+   ========================= */
+.section-3 {
+    background-color: var(--soft-green); /* Color de fondo para la sección */
+}
+
+.list-group-item {
+    background-color: var(--black-pure);
+    color: var(--beige-soft);
+    border: 1px solid var(--orange-pure);
+}
+
+.list-group-item:hover {
     background-color: var(--orange-pure);
-    color: var(--white-pure);
-    padding: 10px 20px; /* Ajustado para un mejor espaciado */
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background-color: var(--orange-bright);
-}
-
-/* Títulos */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--orange-pure);
+/* =========================
+   SECCIÓN 4: QUÉ PENSAMOS
+   ========================= */
+.section-4 {
+    background-color: var(--soft-blue); /* Color de fondo para la sección */
     text-align: center;
-    margin-bottom: 20px; /* Reducido margen inferior */
-    text-transform: uppercase;
 }
 
-h1 { font-size: 42px; } /* Tamaño de fuente ajustado */
-h2 { font-size: 32px; }
-h3 { font-size: 26px; }
-h4 { font-size: 22px; }
-
-/* Imágenes */
-.img-container {
-    width: 100%;
-    height: auto; /* Cambiado para mantener la proporción */
-    overflow: hidden;
-    margin-bottom: 20px; /* Reducido margen inferior */
+.video-wrapper {
+    margin: 20px 0;
 }
 
-.img-container img {
-    width: 100%;
-    height: auto; /* Mantiene la proporción de las imágenes */
-    object-fit: cover;
+.video-wrapper iframe {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border : none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Footer */
+.form-control {
+    background-color: var(--black-pure);
+    color: var(--beige-soft);
+    border: 1px solid var(--orange-pure);
+}
+
+/* =========================
+   SECCIÓN 5: TE PREGUNTAMOS
+   ========================= */
+.section-5 {
+    background-color: var(--light-brown); /* Color de fondo para la sección */
+}
+
+/* =========================
+   SECCIÓN 6: ESTADÍSTICAS
+   ========================= */
+.section-6 {
+    background-color: var(--soft-green); /* Color de fondo para la sección */
+    display: flex;
+    justify-content: space-around; /* Espaciado entre elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+/* =========================
+   SECCIÓN 7: TESTIMONIOS
+   ========================= */
+.testimonio {
+    background-color: var(--light-brown); /* Color de fondo para la sección */
+    padding: 40px 0; /* Espaciado vertical */
+    display: flex;
+    justify-content: center; /* Centrar contenido */
+}
+
+.testimonio-container {
+    background-color: var(--beige-soft); /* Color de fondo para el contenedor */
+    border: 1px solid var(--orange-pure); /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    width: 80%; /* Ancho del contenedor */
+    max-width: 600px; /* Ancho máximo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.testimonio-title {
+    color: var(--orange-pure); /* Color del título */
+    font-size: 1.5em; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.testimonio-content {
+    font-size: 1em; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea */
+    color: var(--black-pure); /* Color del texto */
+}
+
+.persona-info {
+    display: flex; /* Usar flexbox para alinear */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.persona-img {
+    border-radius: 50%; /* Imagen circular */
+    margin-right: 15px; /* Margen derecho */
+    width: 50px; /* Ancho de la imagen */
+    height: 50px; /* Altura de la imagen */
+}
+
+.insights {
+    margin-top: 20px; /* Margen superior */
+    font-style: italic; /* Estilo de fuente en cursiva */
+    color: var(--orange-pure); /* Color del texto */
+}
+
+/* =========================
+   FOOTER
+   ========================= */
 footer {
-    background-color: var(--black-pure);
-    padding: 40px 0; /* Ajustado para un mejor espaciado */
-    text-align: center;
-    color: var(--white-pure);
+    background-color: var(--black-pure); /* Color de fondo */
+    color: var(--beige-soft); /* Color del texto */
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: center; /* Centrar texto */
 }
 
-footer p {
-    margin: 10px 0;
-    font-size: 14px; /* Tamaño de fuente más pequeño para el footer */
+.footer-content {
+    margin-bottom: 20px; /* Margen inferior */
 }
 
-/* Estilos para formularios */
-form {
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto; /* Centrado automático */
-    max-width: 400px; /* Ancho máximo del formulario */
+.footer-links a {
+    color: var(--beige-soft); /* Color de los enlaces */
+    margin: 0 10px; /* Margen lateral */
+    text-decoration: none; /* Sin subrayado */
 }
 
-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
+.footer-links a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
 }
 
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 15px; /* Espaciado entre campos */
-    border: 1px solid var(--orange-pure);
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: var(--black-pure);
-    color: var(--white-pure);
+.footer-bottom {
+    font-size: 0.8em; /* Tamaño de fuente */
 }
 
-form input::placeholder, form textarea::placeholder {
-    color: var(--gray-light); /* Color de placeholder */
+/* =========================
+   IMÁGENES
+   ========================= */
+.img-responsive {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-form button {
-    background-color: var(--orange-pure);
-    color: var(--white-pure);
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.img-thumbnail {
+    border: 2px solid var(--orange-pure); /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
 }
 
-form button:hover {
-    background-color: var(--orange-bright);
+/* =========================
+   MODAL
+   ========================= */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1000; /* Z-index alto */
+    left: 0; /* Alinear a la izquierda */
+    top: 0; /* Alinear arriba */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* overflow: auto; /* Permitir desplazamiento */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: flex-start; /* Alineación a la izquierda */
-    }
-
-    .navbar a {
-        padding: 10px 15px; /* Ajuste de padding en móviles */
-    }
-
-    h1 { font-size: 36px; } /* Tamaño de fuente ajustado para móviles */
-    h2 { font-size: 28px; }
-    h3 { font-size: 24px; }
+.modal-content {
+    background-color: var(--beige-soft); /* Color de fondo del modal */
+    margin: 15% auto; /* Margen superior e inferior */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid var(--orange-pure); /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 16px; /* Tamaño de fuente más pequeño en móviles */
-    }
-
-    .section {
-        padding: 40px 0; /* Menos padding en móviles */
-    }
-
-    .grid-container {
-        gap: 20px; /* Menos espacio entre tarjetas */
-    }
-
-    .btn {
-        padding: 8px 16px; /* Ajuste de padding para botones */
-    }
+/* =========================
+   BOTONES
+   ========================= */
+.button {
+    background-color: var(--orange-pure); /* Color de fondo del botón */
+    color: var(--beige-soft); /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
 }
 
-/* Efectos de transición */
-* {
-    transition: all 0.3s ease; /* Transiciones suaves para todos los elementos */
+.button:hover {
+    background-color: var(--soft-green); /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento */
 }
 
-/* Estilos adicionales */
-blockquote {
-    font-style: italic;
-    margin: 20px 0;
-    padding: 10px 20px;
-    border-left: 5px solid var(--orange-pure);
-    background-color: var(--gray-light);
-}
-
-ul {
-    list-style-type: none; /* Eliminar viñetas */
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px; /* Espaciado entre elementos de lista */
-}
-
-/* Estilo para tablas */
-table {
-    width: 100%;
-    border-collapse: collapse; /* Eliminar espacios entre bordes */
-    margin: 20px 0;
-}
-
-table th, table td {
-    padding: 10px;
-    border: 1px solid var(--orange-pure);
-    text-align: left;
-}
-
-table th {
-    background-color: var(--orange-pure);
-    color: var(--white-pure);
-}
-
-/* Estilos para mensajes de alerta */
-.alert {
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    color: var(--white-pure);
-}
-
-.alert.success {
-    background-color: #4CAF50; /* Verde */
-}
-
-.alert.error {
-    background-color: #f44336; /* Rojo */
-}
-
-.alert.warning {
-    background-color: #ff9800; /* Naranja */
-}
-
-/* Estilos Adicionales (continuación) */
-
-/* Estilos para mensajes de alerta */
-.alert {
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    color: var(--white-pure);
-}
-
-.alert.success {
-    background-color: #4CAF50; /* Verde */
-}
-
-.alert.error {
-    background-color: #f44336; /* Rojo */
-}
-
-.alert.warning {
-    background-color: #ff9800; /* Naranja */
-}
-
-/* Estilos para tooltips */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: var(--black-pure);
-    color: var(--white-pure);
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Coloca el tooltip arriba del texto */
-    left: 50%;
-    margin-left: -60px; /* Centra el tooltip */
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1; /* Muestra el tooltip al pasar el ratón */
-}
-
-/* Estilos para un contenedor de carga */
-.loader {
-    border: 8px solid #f3f3f3; /* Color claro */
-    border-top: 8px solid var(--orange-pure); /* Color de la parte superior */
-    border-radius: 50%;
-    width: 60px; /* Tamaño del loader */
-    height: 60px;
-    animation: spin 2s linear infinite; /* Animación de rotación */
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Estilos para tarjetas de testimonios */
-.testimonial {
-    background-color: var(--gray-light);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial p {
-    font-style: italic;
-    margin: 10px 0;
-}
-
-/* Estilos para pestañas */
-.tabs {
-    display: flex;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.tab {
-    padding: 10px 20px;
-    background-color: var(--black-pure);
-    border: 1px solid var(--orange-pure);
-    margin-right: 5px;
-    transition: background-color 0.3s;
-}
-
-.tab.active {
-    background-color: var(--orange-pure);
-    color: var(--white-pure);
-}
-
-/* Estilos para el carrusel */
-.carousel {
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel .prev, .carousel .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--orange-pure);
-    color: var(--white-pure);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.carousel .prev:hover, .carousel .next:hover {
-    background-color: var(--orange-bright);
-}
-
-.carousel .prev {
-    left: 10px;
-}
-
-.carousel .next {
-    right: 10px;
-}
-
-/* Estilos para acordeones */
-.accordion {
-    background-color: var(--black-pure);
-    color: var(--white-pure);
-    cursor: pointer;
-    padding: 15px;
-    border: 1px solid var(--orange-pure);
-    text-align: left;
-    outline: none;
-    transition: background-color 0.3s;
-}
-
-.accordion.active, .accordion:hover {
-    background-color: var(--orange-pure);
-}
-
-.accordion-content {
-    padding: 0 15px;
-    display: none; /* Oculto por defecto */
-    overflow: hidden;
-}
-
-/* Estilos para secciones de preguntas frecuentes */
-.faq {
-    margin: 20px 0;
-}
-
-.faq h3 {
-    margin-bottom: 10px;
-}
-
-/* Estilo para listas de íconos */
-.icon-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.icon-list .icon-item {
-    margin: 10px;
-    text-align: center;
-}
-
-.icon-list .icon-item img {
-    width: 60px; /* Tamaño de los íconos */
-    height: 60px; /* Mantiene la proporción */
-}
-
-.icon-list .icon-item p {
-    margin-top: 5px; /* Espaciado entre el ícono y el texto */
-}
-
-/* Estilos para tablas responsivas */
-.responsive-table {
-    width: 100%;
-    border-collapse: collapse; /* Eliminar espacios entre bordes */
-}
-
-.responsive-table th, .responsive-table td {
-    padding: 10px;
-    border: 1px solid var(--orange-pure);
-    text-align: left;
-}
-
-.responsive-table th {
-    background-color: var(--orange-pure);
-    color: var(--white-pure);
-}
-
-/* Media Queries para mejorar la responsividad */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-    }
-
-    .navbar {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: flex-start; /* Alineación a la izquierda */
-    }
-
-    .navbar a {
-        padding: 10px 15px; /* Ajuste de padding en móviles */
-        font-size: 16px; /* Tamaño de fuente ajustado para móviles */
-    }
-
-    h1 { font-size: 28px; } /* Tamaño de fuente ajustado para móviles */
-    h2 { font-size: 24px; }
-    h3 { font-size: 20px; }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
-    }
-
-    .section {
-        padding: 30px 0; /* Menos padding en móviles */
-    }
-
-    .grid-container {
-        gap: 15px; /* Menos espacio entre tarjetas */
-    }
-
-    .btn {
-        padding: 8px 16px; /* Ajuste de padding para botones */
-    }
-
-    .loader {
-        width: 40px; /* Tamaño del loader en móviles */
-        height: 40px;
-    }
-
-    .testimonial {
-        padding: 15px; /* Menos padding en móviles */
-    }
-}
-
-/* Estilos para el menú hamburguesa */
-.menu-hamburger {
-    display: none; /* Oculto por defecto */
-}
-
-.menu-hamburger.active {
-    display: block; /* Mostrar en modo activo */
-}
-
-/* Estilos de animación */
-.fade-in {
-    animation: fadeIn 0.5s ease-in; /* Animación de desvanecimiento */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Estilos para el fondo de la página */
-.background {
-    background: url('path/to/your/image.jpg') no-repeat center center fixed; /* Imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    opacity: 0.8; /* Opacidad para un efecto sutil */
-}
-
-/* Estilos para un botón flotante */
-.floating-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--orange-pure);
-    color: var(--white-pure);
-    border: none;
-    border-radius: 50%;
-    width: 60px; /* Tamaño del botón */
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px; /* Tamaño del icono */
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-}
-
-.floating-button:hover {
-    background-color: var(--orange-bright);
+.button:active {
+    transform: scale(0.95); /* Efecto de reducción al hacer clic */
 }
