@@ -43,12 +43,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', function () {
     const navContainer = document.querySelector('.nav-scroll');
 
-    // Agrega eventos de desplazamiento en la barra de navegación
-    navContainer.addEventListener('wheel', function (e) {
-        // Evita el desplazamiento vertical predeterminado
-        e.preventDefault();
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-        // Desplazamiento horizontal, usando el valor del evento `deltaY`
-        navContainer.scrollLeft += e.deltaY;
+    navContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        navContainer.classList.add('active');
+        startX = e.pageX - navContainer.offsetLeft;
+        scrollLeft = navContainer.scrollLeft;
+    });
+
+    navContainer.addEventListener('mouseleave', () => {
+        isDown = false;
+        navContainer.classList.remove('active');
+    });
+
+    navContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        navContainer.classList.remove('active');
+    });
+
+    navContainer.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - navContainer.offsetLeft;
+        const walk = (x - startX) * 3; // Ajusta la velocidad de desplazamiento
+        navContainer.scrollLeft = scrollLeft - walk;
     });
 });
+
