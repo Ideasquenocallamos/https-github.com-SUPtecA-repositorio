@@ -39,3 +39,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navContainer = document.querySelector('.nav-scroll');
+
+    // Agrega eventos de desplazamiento en la barra de navegación
+    navContainer.addEventListener('wheel', function (e) {
+        // Evita el desplazamiento vertical predeterminado
+        e.preventDefault();
+
+        // Desplazamiento horizontal, usando el valor del evento `deltaY`
+        navContainer.scrollLeft += e.deltaY;
+    });
+});
