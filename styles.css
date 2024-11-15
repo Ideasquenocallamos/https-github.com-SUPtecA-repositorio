@@ -328,7 +328,7 @@ footer.dark-mode {
 
 /* Estilos para el botón en modo normal */
 .btn-info {
-    background-color: var(--footer-bg); /* Color de fondo en modo normal */
+    background-color: var(--button-hover-bg); /* Color de fondo en modo normal */
     color: white; /* Color del texto en modo normal */
     border: none; /* Sin borde */
 }
