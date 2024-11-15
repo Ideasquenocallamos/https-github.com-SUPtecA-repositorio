@@ -4,8 +4,8 @@
     --body-bg: #ffe5ba; /* Beige para el fondo de la página */
     --footer-bg: #aa997c; /* Marrón para el pie de página */
     --text-color: #2f4f4f; /* Negro para el texto */
-    --box-bg: #0000; /* Crema para cuadros y contenedores */
-    --button-bg: #f1c40f; /* Amarillo para los botones */
+    --box-bg: #0000; /* Blanco para cuadros y contenedores */
+    --button-bg: #000; /* Amarillo para los botones */
     --button-hover-bg: #2f4f4f; /* Negro para hover en botones */
     --input-bg: #e6f7ff; /* Azul claro para inputs */
     --link-color: #f1c40f; /* Amarillo para los links */
@@ -102,7 +102,7 @@ footer {
     text-align: left; /* Alinear texto a la izquierda */
     font-size: 14px; /* Tamaño de fuente */
     padding-top: 10px; /* Espaciado superior */
-    border-top : 1px solid rgba(255, 255, 255, 0.2); /* Línea superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea superior */
 }
 
 /* Estilos para tarjetas */
@@ -261,12 +261,11 @@ input, textarea, select {
 }
 
 /* Estilos para cada sección en modo oscuro */
-.body .dark-mode, .section-1.dark-mode, .section-2.dark-mode, .section-3.dark-mode, .section-4.dark-mode, .section-5.dark-mode, .section-6.dark-mode, .section-7.dark-mode, .section-8.dark-mode {
+.body .dark-mode, .section-1.dark-mode, .section-2 
+.dark-mode, .section-3.dark-mode, .section-4.dark-mode, .section-5.dark-mode, .section-6.dark-mode, .section-7.dark-mode, .section-8.dark-mode {
     background-color: var(--dark-bg-body); /* Color de fondo en modo oscuro */
     color: var(--dark-text); /* Color del texto en modo oscuro */
 }
-
-
 
 /* Estilo para el contenedor de testimonios en modo oscuro */
 .testimonio-content .dark-mode {
@@ -310,4 +309,40 @@ footer.dark-mode {
 
 .text-center.dark-mode {
     color: var(--dark-text); /* Color del texto en modo oscuro */
+}
+
+/* Estilos para el modo oscuro del modal */
+#modalNuestroFin .modal-content.dark-mode {
+    background-color: var(--dark-bg-footer); /* Fondo oscuro para el modal */
+    color: var(--dark-text); /* Texto claro para el modal */
+}
+
+#modalNuestroFin .modal-header.dark-mode {
+    border-bottom: 1px solid var(--dark-bg-body); /* Línea inferior más clara */
+}
+
+#modalNuestroFin .btn-close.dark-mode {
+    background-color: transparent; /* Fondo transparente para el botón de cerrar */
+    filter: invert(1); /* Cambia el color del botón de cerrar a blanco */
+}
+
+/* Estilos para el botón en modo normal */
+.btn-info {
+    background-color: var(--footer-bg); /* Color de fondo en modo normal */
+    color: white; /* Color del texto en modo normal */
+    border: none; /* Sin borde */
+}
+
+.btn-info:hover {
+    background-color: var(--nav-bar); /* Color de fondo al pasar el ratón por encima en modo normal */
+}
+
+/* Estilos para el botón en modo oscuro */
+.btn-info.dark-mode {
+    background-color: var(--dark-bg-body); /* Color de fondo en modo oscuro */
+    color: white; /* Color del texto en modo oscuro */
+}
+
+.btn-info.dark-mode:hover {
+    background-color: var(--link-color); /* Color de fondo al pasar el ratón por encima en modo oscuro */
 }
