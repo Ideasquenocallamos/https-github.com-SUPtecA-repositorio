@@ -1,267 +1,313 @@
-/* Variables de color */
 :root {
-    /* Colores base */
-    --color1: #87CEEB;
-    --color2: #FFDAB9;
-    --color3: #E0FFFF;
-    --color4: #98FB98;
-    --color5: #FFF0F5;
-    --color6: #40E0D0;
-    --color7: #4682B4;
-    --color8: #FFFFFF;
-    --color9: #2A2A2A;
-    /* Colores adicionales */
-    --cream1: #FFF5E1;
-    --cream2: #FFE4B5;
-    --cream3: #FAF0E6;
-    --cream4: #FFF8DC;
-    --dark-bg: #2F4F4F;
-    --dark-text: #E6F7FF;
+    /* Variables de colores */
+    --nav-bar: #6ca76f; /* Verde para la barra de navegación */
+    --body-bg: #ffe5ba; /* Beige para el fondo de la página */
+    --footer-bg: #aa997c; /* Marrón para el pie de página */
+    --text-color: #2f4f4f; /* Negro para el texto */
+    --box-bg: #0000; /* Crema para cuadros y contenedores */
+    --button-bg: #f1c40f; /* Amarillo para los botones */
+    --button-hover-bg: #2f4f4f; /* Negro para hover en botones */
+    --input-bg: #e6f7ff; /* Azul claro para inputs */
+    --link-color: #f1c40f; /* Amarillo para los links */
+    --link-hover-color: #2f4f4f; /* Negro para hover en links */
+    --dark-bg-body: #4b0082; /* Violeta espectral para el fondo en modo nocturno */
+    --dark-bg-nav: #9932cc; /* Amatista para la barra de navegación en modo nocturno */
+    --dark-bg-footer: #8a2be2; /* Azul púrpura para el footer en modo nocturno */
+    --dark-text: #E6F7FF; /* Texto claro en modo nocturno */
 }
 
-/* Estilo general */
-body {
-    font-family: Arial, sans-serif;
+body, section, nav, footer {
     margin: 0;
     padding: 0;
-    background-color: var(--color3);
-    color: var(--color9);
-}
-h2 {
-    color: var(--color7);
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
+    font-family: 'Poppins', Arial, sans-serif; /* Tipografía para el cuerpo y secciones */
+    text-align: justify; /* Alinear texto a la izquierda */
 }
 
-/* Encabezado */
-header {
-    background-color: var(--color6);
-    color: var(--color8);
-    padding: 20px;
-    text-align: center;
+body {
+    background-color: var(--body-bg); /* Color de fondo para el cuerpo */
+    color: var(--text-color); /* Color del texto */
 }
-header .btn-custom {
-    border-radius: 30px;
-    background-color: var(--color7);
-    color: var(--color8);
+
+/* Estilos para secciones */
+.section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+    padding-top: 40px; /* Espaciado superior e inferior */
+    padding-bottom: 40px; /* Espaciado superior e inferior */
+    background-color: var(--body-bg); /* Color de fondo de las secciones */
 }
 
 /* Barra de navegación */
 .navbar {
-    background-color: var(--color7);
-    padding: 10px;
-}
-.navbar a {
-    color: var(--color8);
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.navbar a:hover {
-    background-color: var(--color2);
-}
-.navbar .btn-outline-light {
-    color: var(--color8);
-    border-color: var(--color8);
+    background-color: var(--nav-bar); /* Color de fondo para la barra de navegación */
 }
 
-/* Secciones con degradados */
-.section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
-    padding: 80px 0;
-    margin-bottom: 40px;
-}
-.section-1 { background: linear-gradient(to bottom, var(--color1), var(--color2)); }
-.section-2 { background: linear-gradient(to bottom, var(--color2), var(--color4)); }
-.section-3 { background: linear-gradient(to bottom, var(--color4), var(--color5)); }
-.section-4 { background: linear-gradient(to bottom, var(--color5), var(--color3)); }
-.section-5 { background: linear-gradient(to bottom, var(--color3), var(--color6)); }
-.section-6 { background: linear-gradient(to bottom, var(--color3), var(--color4)); }
-.section-7 { background: linear-gradient(to bottom, var(--cream2), var(--cream3)); }
-.section-8 { background-color: var(--color5); }
-
-/* Estilos para tarjetas */
-.section-6 .card, .card {
-    background-color: var(--cream1);
-    border: 1px solid var(--color6);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-.card:hover {
-    transform: scale(1.05);
+.nav-link {
+    color: var(--text-color); /* Color del texto de los enlaces de navegación */
 }
 
-/* Estilos de testimonios */
-.testimonio-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color8);
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    border: 2px solid var(--color6);
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-.persona-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid var(--color6);
+.nav-link:hover {
+    color: var(--link-hover-color); /* Color del texto al pasar el ratón por encima */
 }
 
 /* Footer */
 footer {
-    background-color: var(--color6);
-    color: var(--color8);
-    padding: 20px;
-    text-align: center;
+    background-color: var(--footer-bg); /* Color de fondo para el footer */
+    color: var(--text-color); /* Color del texto en el footer */
+    padding: 20px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
 }
+
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Usar flexbox para el contenido del footer */
+    flex-direction: column; /* Organizar los elementos en columna */
+    align-items: flex-start; /* Alinear los elementos al inicio (izquierda) */
 }
+
 .footer-links a {
-    color: var(--color8);
-    text-decoration: none;
+    color: var(--text-color); /* Color de los enlaces en el footer */
+    text-decoration: none; /* Sin subrayado en los enlaces */
 }
+
 .footer-links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayar el texto al pasar el ratón por encima */
 }
+
 .footer-subscribe form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    display: flex; /* Usar flexbox para el formulario de suscripción */
+    flex-direction: column; /* Organizar los elementos en columna */
+    width: 100%; /* Ancho completo */
 }
-.footer-subscribe input, .footer-subscribe button {
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 400px;
-}
+
+.footer-subscribe input,
 .footer-subscribe button {
-    background-color: var(--color7);
-    color: var(--color8);
-    border: none;
-    cursor: pointer;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio inferior */
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo */
 }
+
+.footer-subscribe button {
+    background-color: var(--button-bg); /* Color de fondo del botón */
+    color: var(--text-color); /* Color del texto del botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
 .footer-subscribe button:hover {
-    background-color: var(--color5);
+    background-color: var(--button-hover-bg); /* Color de fondo del botón al pasar el ratón por encima */
 }
+
 .footer-bottom {
-    text-align: center;
-    font-size: 14px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left; /* Alinear texto a la izquierda */
+    font-size: 14px; /* Tamaño de fuente */
+    padding-top: 10px; /* Espaciado superior */
+    border-top : 1px solid rgba(255, 255, 255, 0.2); /* Línea superior */
 }
 
-/* Modo nocturno */
-body.dark-mode {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-}
-.card.dark-mode, .navbar.dark-mode, footer.dark-mode {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
+/* Estilos para tarjetas */
+.card {
+    background-color: var(--box-bg); /* Color de fondo de la tarjeta */
+    border: 1px solid var(--link-color); /* Borde de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
 }
 
-/* Otros estilos */
-a {
-    color: #4682b4;
-    text-decoration: none;
+.card:hover {
+    transform: scale(1.05); /* Aumentar el tamaño de la tarjeta al pasar el ratón por encima */
 }
-a:hover {
-    color: #2f4f4f;
-    text-decoration: underline;
-}
-input, textarea, select {
-    background-color: #e6f7ff;
-    border: 1px solid #4682b4;
-    color: #2f4f4f;
-    padding: 8px;
-    border-radius: 4px;
-}
-button {
-    background-color: #4682b4;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #2f4f4f;
-}
+
 .card img {
-    height: 200px;
-    object-fit: cover;
-}
-table {
-    width: 100%;
-    background-color: #f8f8ff;
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid #5f9ea0;
-    padding: 10px;
-    text-align: left;
-    color: #2f4f4f;
-}
-hr {
-    border: 1px solid #5f9ea0;
-}
-.scrollspy-example {
-    position: relative;
-    height: 400px;
-    overflow: auto;
+    height: 200px; /* Altura de la imagen en la tarjeta */
+    object-fit: cover; /* Ajustar la imagen para cubrir el área */
 }
 
-/* Media Queries para diferentes pantallas */
+/* Estilos para botones */
+button {
+    background-color: var(--button-bg); /* Color de fondo del botón */
+    color: var(--text-color); /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+button:hover {
+    background-color: var(--button-hover-bg); /* Color de fondo del botón al pasar el ratón por encima */
+}
+
+/* Estilos para enlaces */
+a {
+    color: var(--link-color); /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+a:hover {
+    color: var(--link-hover-color); /* Color del texto al pasar el ratón por encima */
+    text-decoration: underline; /* Subrayar el texto al pasar el ratón por encima */
+}
+
+/* Estilos para inputs y selects */
+input, textarea, select {
+    background-color: var(--input-bg); /* Color de fondo para inputs, textarea y select */
+    border: 1px solid var(--link-color); /* Borde del input */
+    color: var(--text-color); /* Color del texto en inputs */
+    padding: 8px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Contenedor de testimonios */
+.testimonio-container {
+    display: flex; /* Usar flexbox para el contenedor de testimonios */
+    flex-direction: column; /* Organizar los elementos en columna */
+    align-items: flex-start; /* Alinear los elementos al inicio (izquierda) */
+    background-color: var(--box-bg); /* Color de fondo del contenedor de testimonios */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding: 30px; /* Espaciado interno */
+    border: 2px solid var(--input-bg); /* Borde del contenedor */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+}
+
+/* Estilos para el contenedor de video */
+.video-wrapper {
+    max-width: 800px; /* Ancho máximo del contenedor de video */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding: 10px; /* Espaciado interno */
+}
+
+.ratio {
+    height: 400px; /* Altura del contenedor de video */
+}
+
+/* Scrollspy */
+.scrollspy-example {
+    position: relative; /* Posición relativa para el contenedor */
+    height: 400px; /* Altura del contenedor */
+    overflow: auto; /* Habilitar el desplazamiento si el contenido excede la altura */
+}
+
+/* Media Queries */
 @media (max-width: 1200px) {
     .navbar a {
-        padding: 8px 12px;
+        padding: 8px 12px; /* Ajustar padding de los enlaces en la barra de navegación */
     }
     h2 {
-        font-size: 2.2rem;
-    }
-    .section-6, .section-7, .section-8 {
-        padding: 60px 0;
+        font-size: 2.2rem; /* Tamaño de fuente para h2 */
     }
 }
 
 @media (max-width: 768px) {
     .navbar a {
-        font-size: 0.9rem;
-        padding: 6px 10px;
+        font-size: 0.9rem; /* Tamaño de fuente para enlaces en pantallas pequeñas */
+        padding: 6px 10px; /* Ajustar padding de los enlaces */
     }
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Tamaño de fuente para h2 en pantallas pequeñas */
     }
-    .section-6, .section-7, .section-8 {
-        padding: 40px 0;
+    .section {
+        padding: 40px 0; /* Ajustar espaciado en secciones */
     }
     .testimonio-container {
-        max-width: 100%;
-        padding: 20px;
+        max-width: 100%; /* Ancho completo en pantallas pequeñas */
+        padding: 20px; /* Ajustar espaciado interno */
     }
 }
 
 @media (max-width: 576px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: column; /* Cambiar a columna en pantallas muy pequeñas */
     }
     .navbar a {
-        padding: 5px 8px;
+        padding: 5px 8px; /* Ajustar padding de los enlaces */
     }
     .footer-content {
-        text-align: center;
+        text-align: left; /* Alinear contenido en el footer a la izquierda */
     }
-    h2 { 
-        font-size: 1.6rem;
+    h2 {
+        font-size: 1.6rem; /* Tamaño de fuente para h2 en pantallas muy pequeñas */
     }
+}
+
+/* Estilos para las secciones en modo oscuro */
+.section-dark {
+    background-color: var(--dark-bg-body); /* Color de fondo para secciones en modo oscuro */
+    color: var(--dark-text); /* Color del texto en modo oscuro */
+    border: 1px solid var(--link-color); /* Borde de la sección en modo oscuro */
+}
+
+.section-dark .nav-link,
+.section-dark a {
+    color: var(--dark-text); /* Color de los enlaces en modo oscuro */
+}
+
+.section-dark .nav-link:hover,
+.section-dark a:hover {
+    color: var(--link-hover-color); /* Color de los enlaces al pasar el ratón en modo oscuro */
+}
+
+/* Estilos para el footer en modo oscuro */
+.footer-dark {
+    background-color: var(--dark-bg-footer); /* Color de fondo para el footer en modo oscuro */
+    color: var(--dark-text); /* Color del texto en el footer en modo oscuro */
+}
+
+/* Estilos para los botones en modo oscuro */
+.button-dark {
+    background-color: var(--button-hover-bg); /* Color de fondo del botón en modo oscuro */
+    color: var(--dark-text); /* Color del texto del botón en modo oscuro */
+}
+
+/* Estilos para cada sección en modo oscuro */
+.body .dark-mode, .section-1.dark-mode, .section-2.dark-mode, .section-3.dark-mode, .section-4.dark-mode, .section-5.dark-mode, .section-6.dark-mode, .section-7.dark-mode, .section-8.dark-mode {
+    background-color: var(--dark-bg-body); /* Color de fondo en modo oscuro */
+    color: var(--dark-text); /* Color del texto en modo oscuro */
+}
+
+
+
+/* Estilo para el contenedor de testimonios en modo oscuro */
+.testimonio-content .dark-mode {
+    background-color: var(--dark-bg-body); /* Color crema pastel morado */
+    border: 2px solid var(--link-color); /* Borde del contenedor */
+    color: var(--dark-text); /* Color del texto en modo oscuro */
+}
+
+/* Estilos para la barra de navegación en modo oscuro */
+.navbar.dark-mode {
+    background-color: var(--dark-bg-nav); /* Color de fondo para la barra de navegación en modo oscuro */
+    color: var(--dark-text); /* Color del texto en modo oscuro */
+}
+
+.navbar.dark-mode .nav-link {
+    color: var(--dark-text); /* Color de los enlaces en la barra de navegación en modo oscuro */
+}
+
+.navbar.dark-mode .nav-link:hover {
+    color: var(--link-hover-color); /* Color de los enlaces al pasar el ratón en modo oscuro */
+}
+
+/* Estilos para el footer en modo oscuro */
+footer.dark-mode {
+    background-color: var(--dark-bg-footer); /* Color de fondo para el footer en modo oscuro */
+    color: var(--dark-text); /* Color del texto en el footer en modo oscuro */
+}
+
+.footer.dark-mode .footer-links a {
+    color: var(--dark-text); /* Color de los enlaces en el footer en modo oscuro */
+}
+
+.footer.dark-mode .footer-links a:hover {
+    color: var(--link-hover-color); /* Color de los enlaces al pasar el ratón en modo oscuro */
+}
+
+/* Estilos para centrar el texto en el footer */
+.text-center {
+    text-align: center; /* Centrar el texto */
+}
+
+.text-center.dark-mode {
+    color: var(--dark-text); /* Color del texto en modo oscuro */
 }
