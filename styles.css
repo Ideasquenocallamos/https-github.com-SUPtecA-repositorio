@@ -346,3 +346,12 @@ footer.dark-mode {
 .btn-info.dark-mode:hover {
     background-color: var(--link-color); /* Color de fondo al pasar el ratón por encima en modo oscuro */
 }
+
+.persona-img {
+    width: 150px; /* Ajusta el tamaño según lo necesites */
+    height: 150px; /* Debe ser igual al ancho para que sea un círculo */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Para que la imagen mantenga sus proporciones */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
