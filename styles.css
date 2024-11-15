@@ -16,6 +16,16 @@
     --dark-text: #E6F7FF; /* Texto claro en modo nocturno */
 }
 
+.nav-scroll {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+}
+
+.nav-scroll .nav-item {
+    flex: 0 0 auto; /* Los elementos no se encogen y ocupan solo el espacio necesario */
+}
+
 body, section, nav, footer {
     margin: 0;
     padding: 0;
