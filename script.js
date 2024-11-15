@@ -1,14 +1,18 @@
-// Toggle de modo nocturno
-const toggleButton = document.getElementById('toggle-theme-btn');
-toggleButton.addEventListener('click', () => {
+// Cambio de tema entre claro y oscuro
+document.getElementById('toggle-theme-btn').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => card.classList.toggle('dark-mode'));
+    document.querySelectorAll('section, nav, footer').forEach(element => {
+        element.classList.toggle('dark-mode');
+    });
+    document.getElementById('toggle-theme-btn').innerText = document.body.classList.contains('dark-mode') ? 'Modo Diurno' : 'Modo Nocturno';
+});
 
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('dark-mode');
-
-    const footer = document.querySelector('footer');
-    footer.classList.toggle('dark-mode');
+// Configuración de desplazamiento suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
