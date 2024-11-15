@@ -23,9 +23,13 @@ body, section, nav, footer {
     text-align: justify; /* Alinear texto a la izquierda */
 }
 
+/* Para evitar que el contenido debajo de la barra de navegación quede cubierto */
+
 body {
     background-color: var(--body-bg); /* Color de fondo para el cuerpo */
     color: var(--text-color); /* Color del texto */
+    padding-top: 70px; /* Ajusta este valor según la altura de tu barra de navegación */
+
 }
 
 /* Estilos para secciones */
@@ -38,10 +42,16 @@ body {
 /* Barra de navegación */
 .navbar {
     background-color: var(--nav-bar); /* Color de fondo para la barra de navegación */
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0; /* Alinea la barra con el borde superior */
+    left: 0; /* Alinea la barra con el borde izquierdo */
+    width: 100%; /* Asegura que la barra ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
     display: flex;
     overflow-x: auto; /* Permite el desplazamiento horizontal */
-    white-space: nowrap; /* Evita el salto de línea de los elementos */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
     -webkit-overflow-scrolling: touch; /* Desplazamiento suave en móviles */
+    padding: 10px 0; /* Espaciado interno */
 }
 
 .navbar::-webkit-scrollbar {
@@ -64,7 +74,6 @@ body {
 .nav-link:hover {
     color: var(--link-hover-color); /* Color del texto al pasar el ratón por encima */
 }
-
 
 /* Footer */
 footer {
