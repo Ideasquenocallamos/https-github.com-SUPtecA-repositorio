@@ -3,9 +3,10 @@
     --nav-bar: #6ca76f; /* Verde para la barra de navegación */
     --body-bg: #ffe5ba; /* Beige para el fondo de la página */
     --footer-bg: #aa997c; /* Marrón para el pie de página */
-    --text-color: #2f4f4f; /* Negro para el texto */
-    --box-bg: #0000; /* Blanco para cuadros y contenedores */
-    --button-bg: #000; /* Amarillo para los botones */
+    --text-color: #000000; /* Negro para el texto */
+    --box-bg: #fff; /* Modo claro Blanco para cuadros y contenedores */
+    --dark-box-bg: #000; /* Modo oscuro Negro para cuadros y contenedores */
+    --button-bg: #f1c40f; /* Amarillo para los botones */
     --button-hover-bg: #2f4f4f; /* Negro para hover en botones */
     --input-bg: #e6f7ff; /* Azul claro para inputs */
     --link-color: #f1c40f; /* Amarillo para los links */
@@ -23,19 +24,15 @@ body, section, nav, footer {
     text-align: justify; /* Alinear texto a la izquierda */
 }
 
-/* Para evitar que el contenido debajo de la barra de navegación quede cubierto */
-
 body {
     background-color: var(--body-bg); /* Color de fondo para el cuerpo */
     color: var(--text-color); /* Color del texto */
     padding-top: 70px; /* Ajusta este valor según la altura de tu barra de navegación */
-
 }
 
 /* Estilos para secciones */
 .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
-    padding-top: 40px; /* Espaciado superior e inferior */
-    padding-bottom: 40px; /* Espaciado superior e inferior */
+    padding: 40px 0; /* Espaciado superior e inferior */
     background-color: var(--body-bg); /* Color de fondo de las secciones */
 }
 
@@ -59,12 +56,12 @@ body {
 }
 
 .navbar::-webkit-scrollbar-thumb {
-    background-color: #888; /* Color del thumb de la barra */
+    background-color: var(--link-color); /* Color del thumb de la barra */
     border-radius: 4px;
 }
 
 .navbar::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Color al pasar el mouse */
+    background-color: var(--body-bg); /* Color al pasar el mouse */
 }
 
 .nav-link {
@@ -82,7 +79,6 @@ footer {
     padding: 20px; /* Espaciado interno */
     text-align: left; /* Alinear texto a la izquierda */
 }
-
 .footer-content {
     display: flex; /* Usar flexbox para el contenido del footer */
     flex-direction: column; /* Organizar los elementos en columna */
@@ -175,28 +171,64 @@ a:hover {
     text-decoration: underline; /* Subrayar el texto al pasar el ratón por encima */
 }
 
-/* Estilos para inputs y selects */
-input, textarea, select {
-    background-color: var(--input-bg); /* Color de fondo para inputs, textarea y select */
-    border: 1px solid var(--link-color); /* Borde del input */
-    color: var(--text-color); /* Color del texto en inputs */
-    padding: 8px; /* Espaciado interno */
-    border-radius: 4px; /* Bordes redondeados */
+.testimonio-card {
+    background-color: var(--input-bg); /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Evita que los elementos expandidos sobresalgan */
+    border: 1px solid var(--link-color);
 }
 
-/* Contenedor de testimonios */
-.testimonio-container {
-    display: flex; /* Usar flexbox para el contenedor de testimonios */
-    flex-direction: column; /* Organizar los elementos en columna */
-    align-items: flex-start; /* Alinear los elementos al inicio (izquierda) */
-    background-color: var(--box-bg); /* Color de fondo del contenedor de testimonios */
-    max-width: 600px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    padding: 30px; /* Espaciado interno */
-    border: 2px solid var(--input-bg); /* Borde del contenedor */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+.persona-info {
+    display: flex; /* Muestra imagen y detalles en una sola fila */
+    gap: 15px;
+    align-items: center;
 }
+
+.persona-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Imagen circular */
+    object-fit: cover;
+    border: 2px solid var(--link-color);
+}
+
+.persona-details p {
+    margin: 5px 0;
+}
+
+.toggle-btn {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-icon {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.testimonio-content {
+    display: none; /* Ocultar inicialmente */
+    margin-top: 15px;
+    padding: 15px;
+    background-color: var(--body-bg);
+    border-radius: 5px;
+    border: 1px solid var(--link-color);
+}
+
 
 /* Estilos para el contenedor de video */
 .video-wrapper {
@@ -216,49 +248,53 @@ input, textarea, select {
     overflow: auto; /* Habilitar el desplazamiento si el contenido excede la altura */
 }
 
-/* Media Queries */
-@media (max-width: 1200px) {
-    .navbar a {
-        padding: 8px 12px; /* Ajustar padding de los enlaces en la barra de navegación */
+/* Media Queries para diseño responsivo */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px; /* Disminuir tamaño de fuente para tabletas */
     }
-    h2 {
-        font-size: 2.2rem; /* Tamaño de fuente para h2 */
+    button {
+        padding: 8px 16px; /* Ajustar espaciado interno de botones */
+    }
+    .card {
+        padding: 15px; /* Ajustar espaciado interno de tarjetas */
+    }
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+        padding: 30px 0; /* Ajustar espaciado en tabletas */
     }
 }
 
 @media (max-width: 768px) {
-    .navbar a {
-        font-size: 0.9rem; /* Tamaño de fuente para enlaces en pantallas pequeñas */
-        padding: 6px 10px; /* Ajustar padding de los enlaces */
+    body {
+        font-size: 12px; /* Disminuir aún más para móviles */
     }
-    h2 {
-        font-size: 1.8rem; /* Tamaño de fuente para h2 en pantallas pequeñas */
+    button {
+        padding: 6px 12px; /* Ajustar espaciado interno de botones */
     }
-    .section {
-        padding: 40px 0; /* Ajustar espaciado en secciones */
+    .card {
+        padding: 10px; /* Ajustar espaciado interno de tarjetas */
     }
-    .testimonio-container {
-        max-width: 100%; /* Ancho completo en pantallas pequeñas */
-        padding: 20px; /* Ajustar espaciado interno */
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+        padding: 20px 0; /* Ajustar espaciado en móviles */
     }
 }
 
-@media (max-width: 576px) {
-    .navbar {
-        flex-direction: column; /* Cambiar a columna en pantallas muy pequeñas */
+@media (max-width: 480px) {
+    body {
+        font-size: 10px; /* Tamaño de fuente más pequeño para móviles muy pequeños */
     }
-    .navbar a {
-        padding: 5px 8px; /* Ajustar padding de los enlaces */
+    button {
+        padding: 5px 10px; /* Ajustar espaciado interno de botones */
     }
-    .footer-content {
-        text-align: left; /* Alinear contenido en el footer a la izquierda */
+    .card {
+        padding: 8px; /* Ajustar espaciado interno de tarjetas */
     }
-    h2 {
-        font-size: 1.6rem; /* Tamaño de fuente para h2 en pantallas muy pequeñas */
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+        padding: 15px 0; /* Ajustar espaciado en móviles muy pequeños */
     }
 }
 
-/* Estilos para las secciones en modo oscuro */
+/* Estilos para secciones en modo oscuro */
 .section-dark {
     background-color: var(--dark-bg-body); /* Color de fondo para secciones en modo oscuro */
     color: var(--dark-text); /* Color del texto en modo oscuro */
@@ -276,27 +312,34 @@ input, textarea, select {
 }
 
 /* Estilos para el footer en modo oscuro */
-.footer-dark {
+footer.dark-mode {
     background-color: var(--dark-bg-footer); /* Color de fondo para el footer en modo oscuro */
     color: var(--dark-text); /* Color del texto en el footer en modo oscuro */
 }
 
 /* Estilos para los botones en modo oscuro */
 .button-dark {
-    background-color: var(--button-hover-bg); /* Color de fondo del botón en modo oscuro */
+    background-color: var(--button-dark-bg); /* Color de fondo del botón en modo oscuro */
     color: var(--dark-text); /* Color del texto del botón en modo oscuro */
 }
 
 /* Estilos para cada sección en modo oscuro */
-.body .dark-mode, .section-1.dark-mode, .section-2 
-.dark-mode, .section-3.dark-mode, .section-4.dark-mode, .section-5.dark-mode, .section-6.dark-mode, .section-7.dark-mode, .section-8.dark-mode {
+.body .dark-mode, 
+.section-1.dark-mode, 
+.section-2.dark-mode, 
+.section-3.dark-mode, 
+.section-4.dark-mode, 
+.section-5.dark-mode, 
+.section-6.dark-mode, 
+.section-7.dark-mode, 
+.section-8.dark-mode {
     background-color: var(--dark-bg-body); /* Color de fondo en modo oscuro */
     color: var(--dark-text); /* Color del texto en modo oscuro */
 }
 
 /* Estilo para el contenedor de testimonios en modo oscuro */
 .testimonio-content .dark-mode {
-    background-color: var(--dark-bg-body); /* Color crema pastel morado */
+    background-color: var(--dark-box-bg); /* Color de fondo en modo oscuro */
     border: 2px solid var(--link-color); /* Borde del contenedor */
     color: var(--dark-text); /* Color del texto en modo oscuro */
 }
@@ -356,7 +399,7 @@ footer.dark-mode {
 /* Estilos para el botón en modo normal */
 .btn-info {
     background-color: var(--button-hover-bg); /* Color de fondo en modo normal */
-    color: white; /* Color del texto en modo normal */
+    color: var(--text-color); /* Color del texto en modo normal */
     border: none; /* Sin borde */
 }
 
@@ -367,11 +410,11 @@ footer.dark-mode {
 /* Estilos para el botón en modo oscuro */
 .btn-info.dark-mode {
     background-color: var(--dark-bg-body); /* Color de fondo en modo oscuro */
-    color: white; /* Color del texto en modo oscuro */
+    color: var(--dark-text); /* Color del texto en modo oscuro */
 }
 
 .btn-info.dark-mode:hover {
-    background-color: var(--link-color); /* Color de fondo al pasar el ratón por encima en modo oscuro */
+    background-color: var(--dark-box-bg); /* Color de fondo al pasar el ratón por encima en modo oscuro */
 }
 
 .persona-img {
@@ -381,4 +424,61 @@ footer.dark-mode {
     object-fit: cover; /* Para que la imagen mantenga sus proporciones */
     display: block;
     margin: 0 auto; /* Centra la imagen */
+}
+
+/* Estilos para cuadros en modo oscuro */
+.card.dark-mode {
+    background-color: var(--dark-box-bg); /* Color de fondo de la tarjeta en modo oscuro */
+    border: 1px solid var(--link-color); /* Borde de la tarjeta en modo oscuro */
+}
+
+.testimonio-container.dark-mode {
+    background-color: var(--dark-box-bg); /* Color de fondo del contenedor de testimonios en modo oscuro */
+    border: 2px solid var(--link-color); /* Borde del contenedor en modo oscuro */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px; /* Disminuir tamaño de fuente para tabletas */
+    }
+    button {
+        padding: 8px 16px; /* Ajustar espaciado interno de botones */
+    }
+    .card {
+        padding: 15px; /* Ajustar espaciado interno de tarjetas */
+    }
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+        padding: 30px 0; /* Ajustar espaciado en tabletas */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px; /* Disminuir aún más para móviles */
+    }
+    button {
+        padding: 6px 12px; /* Ajustar espaciado interno de botones */
+    }
+    .card {
+        padding: 10px; /* Ajustar espaciado interno de tarjetas */
+    }
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+        padding: 20px 0; /* Ajustar espaciado en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 10px; /* Tamaño de fuente más pequeño para móviles muy pequeños */
+    }
+    button {
+        padding: 5px 10px; /* Ajustar espaciado interno de botones */
+    }
+    .card {
+        padding: 8px; /* Ajustar espaciado interno de tarjetas */
+    }
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
+        padding: 15px 0; /* Ajustar espaciado en móviles muy pequeños */
+    }
 }
