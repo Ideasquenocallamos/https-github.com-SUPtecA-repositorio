@@ -432,7 +432,7 @@ footer.dark-mode {
     border: 1px solid var(--link-color); /* Borde de la tarjeta en modo oscuro */
 }
 
-.testimonio-container.dark-mode {
+.testimonio-content.dark-mode {
     background-color: var(--dark-box-bg); /* Color de fondo del contenedor de testimonios en modo oscuro */
     border: 2px solid var(--link-color); /* Borde del contenedor en modo oscuro */
 }
