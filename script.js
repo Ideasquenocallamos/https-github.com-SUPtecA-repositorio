@@ -7,6 +7,11 @@ document.getElementById('toggle-theme-btn').addEventListener('click', () => {
         element.classList.toggle('dark-mode');
     });
 
+    // Cambiar el modo en tarjetas y contenedores de testimonios
+    document.querySelectorAll('.card, .testimonio-container').forEach(element => {
+        element.classList.toggle('dark-mode');
+    });
+
     // Cambiar el modo en el modal
     const modalContent = document.querySelector('#modalNuestroFin .modal-content');
     const modalHeader = document.querySelector('#modalNuestroFin .modal-header');
@@ -30,46 +35,30 @@ document.getElementById('toggle-theme-btn').addEventListener('click', () => {
     document.getElementById('toggle-theme-btn').innerText = document.body.classList.contains('dark-mode') ? 'Modo Diurno' : 'Modo Nocturno';
 });
 
-// Configuración de desplazamiento suave
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+
+// Función para manejar el desplazamiento suave al hacer clic en los enlaces de navegación
+document.querySelectorAll('.navbar a.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+        const targetId = this.getAttribute('href'); // Obtener el ID del objetivo
+        const targetElement = document.querySelector(targetId); // Seleccionar el elemento objetivo
+
+        // Desplazarse suavemente al elemento objetivo
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const navContainer = document.querySelector('.nav-scroll');
+document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
 
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+        // Alternar visibilidad del contenido
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
 
-    navContainer.addEventListener('mousedown', (e) => {
-        isDown = true;
-        navContainer.classList.add('active');
-        startX = e.pageX - navContainer.offsetLeft;
-        scrollLeft = navContainer.scrollLeft;
-    });
-
-    navContainer.addEventListener('mouseleave', () => {
-        isDown = false;
-        navContainer.classList.remove('active');
-    });
-
-    navContainer.addEventListener('mouseup', () => {
-        isDown = false;
-        navContainer.classList.remove('active');
-    });
-
-    navContainer.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - navContainer.offsetLeft;
-        const walk = (x - startX) * 3; // Ajusta la velocidad de desplazamiento
-        navContainer.scrollLeft = scrollLeft - walk;
+        // Cambiar el icono entre "+" y "-"
+        const icon = button.querySelector('.toggle-icon');
+        icon.textContent = content.style.display === 'block' ? '−' : '+';
     });
 });
-
