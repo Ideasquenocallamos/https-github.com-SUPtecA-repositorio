@@ -463,3 +463,7 @@ body.dark-mode {
     background-color: var(--dark-box-bg); /* Color de fondo del contenedor de testimonios en modo oscuro */
     border: 2px solid var(--link-color); /* Borde del contenedor en modo oscuro */
 }
+
+.text-center p{
+    color: #ffffff;
+}
