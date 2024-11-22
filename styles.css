@@ -7,7 +7,7 @@
     --box-bg: #fff; /* Modo claro Blanco para cuadros y contenedores */
     --dark-box-bg: #333; /* Modo oscuro gris oscuro para cuadros y contenedores */
     --button-bg: #f1c40f; /* Amarillo para los botones */
-    --button-hover-bg: #2f4f4f; /* Negro para hover en botones */
+    --button-hover-bg: #fff; /* Negro para hover en botones */
     --input-bg: #e6f7ff; /* Azul claro para inputs */
     --link-color: #f1c40f; /* Amarillo para los links */
     --link-hover-color: #2f4f4f; /* Negro para hover en links */
