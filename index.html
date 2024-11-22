@@ -14,9 +14,9 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <button id="btn" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalNuestroFin">
-                    Fin
-                </button>
+                <button id="toggle-theme-btn" class=""> <svg xmlns="https://img.icons8.com/ios-filled/50/ffffff/crescent-moon.png" viewBox="0 0 24 24" fill="#f" width="24px" height="24px">
+                    <path d="M12 2c-.76 0-1.5.09-2.21.26a8 8 0 005.95 11.5 8 8 0 01-3.74 7.54A10 10 0 102 12c0-4.41 2.82-8.16 6.74-9.52A7.88 7.88 0 0012 2z"/>
+                  </svg></button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,7 +30,6 @@
                         <li class="nav-item"><a class="nav-link" href="#entrevistas">Entrevistas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#testimonio">Testimonio</a></li>
                     </ul>
-                    <button id="toggle-theme-btn" class="btn btn-custom">Modo Nocturno</button>
                 </div>
             </div>
         </nav>
@@ -112,60 +111,125 @@
             </article>
         </section>
 
-        <section id="sabias-que" class="section-3">  
+        <section id="sabias-que" class="section-3 py-5">   
             <article class="container">
-                <h2>Sabías que...</h2>
+                <h2 class="text-center mb-4">Sabías que...</h2>
                 <div class="row">
-                    <aside class="col-4">
-                        <nav id="list-example" class="list-group">
-                            <a class="list-group-item list-group-item-action" href="#list-item-1">Efectos en la agricultura:</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-2">Políticas globales:</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-3">Impacto en los océanos:</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-4">Cambio climático en cifras:</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-5">Desastres naturales:</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-6">Educación y concientización:</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-7">Deforestación y cambio climático:</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-8">Biodiversidad en peligro:</a>
-                        </nav>
-                    </aside>
-
-                    <article class="col-8">
-                        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-                            <section class="col-8">
-                                <h4 id="list-item-1"><strong>Efectos en la agricultura:</strong></h4>
-                                <p>El cambio climático está teniendo efectos devastadores en la agricultura global. Las alteraciones en los patrones climáticos, tales como sequías más prolongadas, lluvias más intensas y temperaturas extremas, están afectando la productividad de los cultivos y la calidad de los alimentos. El aumento de la temperatura global también incrementa la evaporación de agua, reduciendo la disponibilidad de recursos hídricos, lo que dificulta el riego de los cultivos. En muchas regiones, especialmente en países en desarrollo, esto está llevando a una disminución significativa en la producción agrícola, lo que amenaza la seguridad alimentaria...
-                                <a href="https://www.fao.org/climate-change/en/" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-                                
-                                <h4 id="list-item-2"><strong>Políticas globales:</strong></h4>
-                                <p>Los acuerdos internacionales, como el Acuerdo de París, son fundamentales para coordinar los esfuerzos globales en la lucha contra el cambio climático. Estos acuerdos buscan reducir las emisiones de gases de efecto invernadero a través de políticas sostenibles y compromisos de reducción de carbono por parte de los países. El Acuerdo de París, firmado en 2015, establece un marco global para que los países trabajen en conjunto para limitar el aumento de la temperatura global por debajo de 2°C respecto a los niveles preindustriales, y si es posible, a 1.5°C. Este objetivo se considera esencial para evitar los efectos más catastróficos del cambio climático...
-                                <a href="https://unfccc.int/process-and-meetings/the-paris-agreement" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-                                
-                                <h4 id="list-item-3"><strong>Impacto en los océanos:</strong></h4>
-                                <p>Los océanos están siendo gravemente afectados por el cambio climático. Uno de los efectos más visibles es la acidificación de los océanos, un proceso en el que el dióxido de carbono (CO2) de la atmósfera se disuelve en el agua, formando ácido carbónico. Esto reduce el pH del agua, lo que afecta a los organismos marinos que dependen de un entorno alcalino para sobrevivir, como los corales, los moluscos y algunos tipos de plancton. Además, el aumento de las temperaturas globales está provocando el blanqueamiento de los corales...
-                                <a href="https://www.noaa.gov/education/resource-collections/ocean-acidification" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-                                
-                                <h4 id="list-item-4"><strong>Cambio climático en cifras:</strong></h4>
-                                <p>En Perú, el cambio climático ya está teniendo un impacto negativo en el medio ambiente y en las comunidades. Un dato alarmante es que el 70% de la población está expuesta a la inseguridad hídrica, una situación que se agrava debido a la disminución de los glaciares andinos, que han perdido más de la mitad de su volumen en los últimos 50 años. Los glaciares son fuentes cruciales de agua para las zonas de alta montaña y las ciudades cercanas, y su deshielo amenaza el suministro de agua potable y el riego agrícola...
-                                <a href="https://www.minam.gob.pe/somoscop20/el-cambio-climatico-en-cifras/" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-                                
-                                <h4 id="list-item-5"><strong>Desastres naturales:</strong></h4>
-                                <p>El cambio climático está aumentando la frecuencia y la intensidad de los desastres naturales en todo el mundo, y Perú no es la excepción. Los fenómenos climáticos extremos, como tormentas intensas, sequías prolongadas e inundaciones, se han vuelto más comunes en los últimos años, afectando gravemente la infraestructura, la seguridad y la vida de las personas. Un ejemplo es el fenómeno de El Niño, que se caracteriza por el calentamiento anómalo de las aguas del océano Pacífico, lo que provoca lluvias torrenciales y desbordes de ríos en la costa peruana. Además de haber causado miles de millones de dólares en daños...
-                                <a href="https://www.un.org/es/climatechange" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-        
-                                <h4 id="list-item-6"><strong>Educación y concientización:</strong></h4>
-                                <p>La educación y la concientización sobre el cambio climático son esenciales para mitigar sus efectos. Las campañas de sensibilización ayudan a que las personas comprendan la urgencia de adoptar comportamientos más sostenibles. Iniciativas a nivel global y local buscan promover la participación activa de los ciudadanos en la reducción de su huella de carbono. Programas educativos en escuelas y universidades son claves para preparar a las futuras generaciones a enfrentar los desafíos del cambio climático...
-                                <a href="https://www.unesco.org/en/climate-change-education" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-        
-                                <h4 id="list-item-7"><strong>Deforestación y cambio climático:</strong></h4>
-                                <p>La deforestación es uno de los principales motores del cambio climático. Al talar bosques, se liberan grandes cantidades de dióxido de carbono (CO2) almacenadas en los árboles, contribuyendo al calentamiento global. Además, la pérdida de bosques afecta la biodiversidad y reduce la capacidad de los ecosistemas para regular el clima. Las selvas tropicales, como la Amazonía, son vitales para el equilibrio climático global, ya que absorben grandes cantidades de CO2...
-                                <a href="https://www.wri.org/deforestation" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-        
-                                <h4 id="list-item-8"><strong>Biodiversidad en peligro:</strong></h4>
-                                <p>El cambio climático está poniendo en peligro a muchas especies animales y vegetales. El aumento de las temperaturas y los cambios en los patrones climáticos afectan los hábitats naturales de muchas especies, lo que las pone en riesgo de extinción. Por ejemplo, los osos polares, que dependen del hielo marino para cazar y reproducirse, están viendo reducida su supervivencia debido al deshielo de los polos. La pérdida de biodiversidad afecta también a los ecosistemas, ya que cada especie juega un papel crucial en el equilibrio natural...
-                                <a href="https://www.iucn.org/resources/issues-briefs/climate-change-and-biodiversity" target="_blank" rel="noopener noreferrer">Leer más</a></p>
-                            </section>
+                    <aside class="col-12">
+                        <div class="accordion" id="sabiasQueAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        Efectos en la agricultura
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>El cambio climático está teniendo efectos devastadores en la agricultura global. Las alteraciones en los patrones climáticos, tales como sequías más prolongadas, lluvias más intensas y temperaturas extremas, están afectando la productividad de los cultivos y la calidad de los alimentos...</p>
+                                        <a href="https://www.fao.org/climate-change/en/" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        Políticas globales
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>Los acuerdos internacionales, como el Acuerdo de París, son fundamentales para coordinar los esfuerzos globales en la lucha contra el cambio climático...</p>
+                                        <a href="https://unfccc.int/process-and-meetings/the-paris-agreement" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        Impacto en los océanos
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>Los océanos están siendo gravemente afectados por el cambio climático. Uno de los efectos más visibles es la acidificación de los océanos...</p>
+                                        <a href="https://www.noaa.gov/education/resource-collections/ocean-acidification" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Cambio climático en cifras
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>En Perú, el cambio climático ya está teniendo un impacto negativo en el medio ambiente y en las comunidades...</p>
+                                        <a href="https://www.minam.gob.pe/somoscop20/el-cambio-climatico-en-cifras/" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        Desastres naturales
+                                    </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>El cambio climático está aumentando la frecuencia y la intensidad de los desastres naturales en todo el mundo...</p>
+                                        <a href="https://www.un.org/es/climatechange" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                        Educación y concientización
+                                    </button>
+                                </h2>
+                                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>La educación y la concientización sobre el cambio climático son esenciales para mitigar sus efectos...</p>
+                                        <a href="https://www.unesco.org/en/climate-change-education" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading7">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                        Deforestación y cambio climático
+                                    </button>
+                                </h2>
+                                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>La deforestación es uno de los principales motores del cambio climático...</p>
+                                        <a href="https://www.wri.org/deforestation" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading8">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                        Biodiversidad en peligro
+                                    </button>
+                                </h2>
+                                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#sabiasQueAccordion">
+                                    <div class="accordion-body">
+                                        <p>El cambio climático está poniendo en peligro a muchas especies animales y vegetales...</p>
+                                        <a href="https://www.iucn.org/resources/issues-briefs/climate-change-and-biodiversity" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </article>
+                    </aside>
                 </div>
             </article>
         </section>
