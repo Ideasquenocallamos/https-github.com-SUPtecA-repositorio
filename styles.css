@@ -5,7 +5,7 @@
     --footer-bg: #aa997c; /* Marrón para el pie de página */
     --text-color: #000000; /* Negro para el texto */
     --box-bg: #fff; /* Modo claro Blanco para cuadros y contenedores */
-    --dark-box-bg: #000; /* Modo oscuro Negro para cuadros y contenedores */
+    --dark-box-bg: #333; /* Modo oscuro gris oscuro para cuadros y contenedores */
     --button-bg: #f1c40f; /* Amarillo para los botones */
     --button-hover-bg: #2f4f4f; /* Negro para hover en botones */
     --input-bg: #e6f7ff; /* Azul claro para inputs */
@@ -79,6 +79,7 @@ footer {
     padding: 20px; /* Espaciado interno */
     text-align: left; /* Alinear texto a la izquierda */
 }
+
 .footer-content {
     display: flex; /* Usar flexbox para el contenido del footer */
     flex-direction: column; /* Organizar los elementos en columna */
@@ -171,65 +172,6 @@ a:hover {
     text-decoration: underline; /* Subrayar el texto al pasar el ratón por encima */
 }
 
-.testimonio-card {
-    background-color: var(--input-bg); /* Fondo claro */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
-    padding: 20px;
-    margin-bottom: 20px;
-    overflow: hidden; /* Evita que los elementos expandidos sobresalgan */
-    border: 1px solid var(--link-color);
-}
-
-.persona-info {
-    display: flex; /* Muestra imagen y detalles en una sola fila */
-    gap: 15px;
-    align-items: center;
-}
-
-.persona-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Imagen circular */
-    object-fit: cover;
-    border: 2px solid var(--link-color);
-}
-
-.persona-details p {
-    margin: 5px 0;
-}
-
-.toggle-btn {
-    background-color: var(--button-bg);
-    color: var(--text-color);
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    margin-top: 15px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.toggle-icon {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.testimonio-content {
-    display: none; /* Ocultar inicialmente */
-    margin-top: 15px;
-    padding: 15px;
-    background-color: var(--body-bg);
-    border-radius: 5px;
-    border: 1px solid var(--link-color);
-}
-
-
 /* Estilos para el contenedor de video */
 .video-wrapper {
     max-width: 800px; /* Ancho máximo del contenedor de video */
@@ -246,52 +188,6 @@ a:hover {
     position: relative; /* Posición relativa para el contenedor */
     height: 400px; /* Altura del contenedor */
     overflow: auto; /* Habilitar el desplazamiento si el contenido excede la altura */
-}
-
-/* Media Queries para diseño responsivo */
-@media (max-width: 1024px) {
-    body {
-        font-size: 14px; /* Disminuir tamaño de fuente para tabletas */
-    }
-    button {
-        padding: 8px 16px; /* Ajustar espaciado interno de botones */
-    }
-    .card {
-        padding: 15px; /* Ajustar espaciado interno de tarjetas */
-    }
-    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
-        padding: 30px 0; /* Ajustar espaciado en tabletas */
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 12px; /* Disminuir aún más para móviles */
-    }
-    button {
-        padding: 6px 12px; /* Ajustar espaciado interno de botones */
-    }
-    .card {
-        padding: 10px; /* Ajustar espaciado interno de tarjetas */
-    }
-    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
-        padding: 20px 0; /* Ajustar espaciado en móviles */
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 10px; /* Tamaño de fuente más pequeño para móviles muy pequeños */
-    }
-    button {
-        padding: 5px 10px; /* Ajustar espaciado interno de botones */
-    }
-    .card {
-        padding: 8px; /* Ajustar espaciado interno de tarjetas */
-    }
-    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
-        padding: 15px 0; /* Ajustar espaciado en móviles muy pequeños */
-    }
 }
 
 /* Estilos para secciones en modo oscuro */
@@ -417,26 +313,6 @@ footer.dark-mode {
     background-color: var(--dark-box-bg); /* Color de fondo al pasar el ratón por encima en modo oscuro */
 }
 
-.persona-img {
-    width: 150px; /* Ajusta el tamaño según lo necesites */
-    height: 150px; /* Debe ser igual al ancho para que sea un círculo */
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    object-fit: cover; /* Para que la imagen mantenga sus proporciones */
-    display: block;
-    margin: 0 auto; /* Centra la imagen */
-}
-
-/* Estilos para cuadros en modo oscuro */
-.card.dark-mode {
-    background-color: var(--dark-box-bg); /* Color de fondo de la tarjeta en modo oscuro */
-    border: 1px solid var(--link-color); /* Borde de la tarjeta en modo oscuro */
-}
-
-.testimonio-content.dark-mode {
-    background-color: var(--dark-box-bg); /* Color de fondo del contenedor de testimonios en modo oscuro */
-    border: 2px solid var(--link-color); /* Borde del contenedor en modo oscuro */
-}
-
 /* Media Queries para diseño responsivo */
 @media (max-width: 1024px) {
     body {
@@ -481,4 +357,99 @@ footer.dark-mode {
     .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
         padding: 15px 0; /* Ajustar espaciado en móviles muy pequeños */
     }
+}
+
+/* Estilos para tarjetas en modo oscuro */
+.testimonio-card {
+    background-color: var(--box-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--link-color);
+}
+
+.persona-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.persona-img {
+    width: 150px; /* Ancho mayor que el alto para lograr la forma ovalada */
+    height: 100px; /* Alto de la imagen */
+    border-radius: 50%; /* Asegura que la imagen sea ovalada */
+    object-fit: cover; /* Hace que la imagen cubra el área del contenedor sin deformarse */
+    border: 2px solid var(--link-color); /* Borde alrededor de la imagen */
+}
+
+
+.persona-details {
+    margin: 0; /* Para evitar márgenes no deseados */
+}
+
+.testimonio-content {
+    display: none; /* Ocultar inicialmente */
+    margin-top: 15px;
+    padding: 15px;
+    background-color: var(--box-bg);
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+}
+
+footer.insights {
+    margin-top: 15px;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: var(--dark-bg-body);
+    color: var(--dark-text);
+}
+
+.testimonio-card.dark-mode {
+    background-color: var(--dark-box-bg);
+    border: 1px solid var(--link-color);
+}
+
+.testimonio-content.dark-mode {
+    background-color: var(--dark-box-bg);
+    border: 1px solid var(--button-bg);
+}
+
+/* Estilos para botones */
+.toggle-btn {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-btn:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.toggle-icon {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos para cuadros en modo oscuro */
+.card.dark-mode {
+    background-color: var(--dark-box-bg); /* Color de fondo de la tarjeta en modo oscuro */
+    border: 1px solid var(--link-color); /* Borde de la tarjeta en modo oscuro */
+}
+
+.testimonio-content.dark-mode {
+    background-color: var(--dark-box-bg); /* Color de fondo del contenedor de testimonios en modo oscuro */
+    border: 2px solid var(--link-color); /* Borde del contenedor en modo oscuro */
 }
