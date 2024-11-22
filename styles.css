@@ -1,19 +1,19 @@
 :root {
     /* Variables de colores */
-    --nav-bar: #6ca76f; /* Verde para la barra de navegación */
-    --body-bg: #ffe5ba; /* Beige para el fondo de la página */
-    --footer-bg: #aa997c; /* Marrón para el pie de página */
+    --nav-bar: #025c40; /* Verde para la barra de navegación */
+    --body-bg: #ffffff; /* Beige para el fondo de la página */
+    --footer-bg: #323230; /* Marrón para el pie de página */
     --text-color: #000000; /* Negro para el texto */
-    --box-bg: #fff; /* Modo claro Blanco para cuadros y contenedores */
+    --box-bg: #eae9e7; /* Modo claro Blanco para cuadros y contenedores */
     --dark-box-bg: #333; /* Modo oscuro gris oscuro para cuadros y contenedores */
-    --button-bg: #f1c40f; /* Amarillo para los botones */
-    --button-hover-bg: #fff; /* Negro para hover en botones */
-    --input-bg: #e6f7ff; /* Azul claro para inputs */
+    --button-bg: transparent; /* Amarillo para los botones */
+    --button-hover-bg: transparent; /* Negro para hover en botones */
+    --input-bg: #fff; /* Azul claro para inputs */
     --link-color: #f1c40f; /* Amarillo para los links */
     --link-hover-color: #2f4f4f; /* Negro para hover en links */
-    --dark-bg-body: #4b0082; /* Violeta espectral para el fondo en modo nocturno */
-    --dark-bg-nav: #9932cc; /* Amatista para la barra de navegación en modo nocturno */
-    --dark-bg-footer: #8a2be2; /* Azul púrpura para el footer en modo nocturno */
+    --dark-bg-body: #004581; /* Violeta espectral para el fondo en modo nocturno */
+    --dark-bg-nav: #001b48; /* Amatista para la barra de navegación en modo nocturno */
+    --dark-bg-footer: #001b48; /* Azul púrpura para el footer en modo nocturno */
     --dark-text: #E6F7FF; /* Texto claro en modo nocturno */
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .nav-link {
-    color: var(--text-color); /* Color del texto de los enlaces de navegación */
+    color: var(--dark-text); /* Color del texto de los enlaces de navegación */
 }
 
 .nav-link:hover {
@@ -180,7 +180,14 @@ a:hover {
 }
 
 .ratio {
-    height: 400px; /* Altura del contenedor de video */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--body-bg); /* Aproximación al color de fondo */
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto; /* Altura del contenedor de video */
 }
 
 /* Scrollspy */
@@ -399,7 +406,10 @@ footer.dark-mode {
 
 footer.insights {
     margin-top: 15px;
+    background-color: #000000;
+    color: #fff;
 }
+
 
 /* Estilos para el modo oscuro */
 body.dark-mode {
