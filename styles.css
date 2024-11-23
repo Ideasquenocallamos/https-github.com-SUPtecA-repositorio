@@ -599,3 +599,24 @@ body.dark-mode {
     background-color: var(--dark-box-bg); /* Color de fondo del contenedor de testimonios en modo oscuro */
     border: 2px solid var(--link-color); /* Borde del contenedor en modo oscuro */
 }
+
+/* Fondo negro para los botones de control */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: none; /* Establece el fondo negro */
+    border: none; /* Elimina el borde */
+    border-radius: none; /* Bordes redondeados */
+    width: 10%;
+}
+
+/* Asegura que los íconos del botón estén visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Color blanco para el ícono */
+}
+
+/* Estilo para el hover (cuando el usuario pasa el ratón) */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #333; /* Cambia el fondo a un gris oscuro al pasar el ratón */
+}
