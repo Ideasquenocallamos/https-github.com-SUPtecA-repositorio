@@ -456,7 +456,7 @@ footer.dark-mode {
     background-color: var(--dark-box-bg); /* Color de fondo al pasar el ratón por encima en modo oscuro */
 }
 
-/* Media Queries para diseño responsivo */
+/* Cuando la pantalla es más pequeña (tabletas) */
 @media (max-width: 1024px) {
     body {
         font-size: 14px; /* Disminuir tamaño de fuente para tabletas */
@@ -470,8 +470,15 @@ footer.dark-mode {
     .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
         padding: 30px 0; /* Ajustar espaciado en tabletas */
     }
+    .portada-imagen {
+        height: 120vh; /* Aumentar la altura en pantallas de tamaño tablet */
+        padding-left: 10px; /* Disminuir padding izquierdo en pantallas más pequeñas */
+        padding-right: 10px; /* Disminuir padding derecho en pantallas más pequeñas */
+        padding-top: 20px; /* Aumentar padding-top en tabletas */
+    }
 }
 
+/* Cuando la pantalla es aún más pequeña (móviles) */
 @media (max-width: 768px) {
     body {
         font-size: 12px; /* Disminuir aún más para móviles */
@@ -485,8 +492,15 @@ footer.dark-mode {
     .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
         padding: 20px 0; /* Ajustar espaciado en móviles */
     }
+    .portada-imagen {
+        height: 130vh; /* Aumentar aún más la altura en pantallas de móviles */
+        padding-left: 5px; /* Reducir aún más el padding en pantallas móviles */
+        padding-right: 5px; /* Reducir aún más el padding en pantallas móviles */
+        padding-top: 30px; /* Aumentar padding-top aún más en móviles */
+    }
 }
 
+/* Para pantallas muy pequeñas (móviles pequeños) */
 @media (max-width: 480px) {
     body {
         font-size: 10px; /* Tamaño de fuente más pequeño para móviles muy pequeños */
@@ -499,6 +513,12 @@ footer.dark-mode {
     }
     .section-1, .section-2, .section-3, .section-4, .section-5, .section-6, .section-7, .section-8 {
         padding: 15px 0; /* Ajustar espaciado en móviles muy pequeños */
+    }
+    .portada-imagen {
+        height: 140vh; /* Aumentar aún más la altura en pantallas más pequeñas */
+        padding-left: 3px; /* Reducir aún más el padding en pantallas muy pequeñas */
+        padding-right: 3px; /* Reducir aún más el padding en pantallas muy pequeñas */
+        padding-top: 40px; /* Aumentar padding-top aún más en pantallas muy pequeñas */
     }
 }
 
