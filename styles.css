@@ -126,8 +126,7 @@ body.dark-mode .modal-body p {
 
 .portada-imagen {
     position: relative;
-    background-image: url('foto.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover;
+    background-image: url('foto.jpg'); /* Aquí usas la función url() */    background-size: cover;
     background-position: center;
     height: 110vh; /* Ocupa toda la pantalla */
     text-align: justify;
