@@ -24,9 +24,6 @@ document.getElementById('toggle-theme-btn').addEventListener('click', () => {
     if (btnClose) btnClose.classList.toggle('dark-mode');
     if (btnFin) btnFin.classList.toggle('dark-mode');
 
-    // Cambiar el texto del botón de tema
-    document.getElementById('toggle-theme-btn').innerText = 
-        document.body.classList.contains('dark-mode') ? 'Modo Diurno' : 'Modo Nocturno';
 });
 
 // Desplazamiento suave en los enlaces del menú de navegación
