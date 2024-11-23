@@ -17,6 +17,139 @@
     --dark-text: #E6F7FF; /* Texto claro en modo nocturno */
 }
 
+/* Estilo del fondo del modal */
+.modal.fade .modal-dialog {
+    max-width: 800px; /* Ajustar el tamaño del modal */
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: var(--box-bg); /* Fondo blanco para el contenido en modo claro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Modo oscuro para el contenido del modal */
+body.dark-mode .modal-content {
+    background-color: var(--dark-bg-body); /* Fondo oscuro para el contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa en modo oscuro */
+}
+
+/* Estilo de la cabecera del modal */
+.modal-header {
+    background-color: var(--nav-bar); /* Fondo verde para la cabecera */
+    color: var(--dark-text); /* Texto claro */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Modo oscuro para la cabecera del modal */
+body.dark-mode .modal-header {
+    background-color: var(--dark-bg-nav); /* Fondo oscuro para la cabecera en modo nocturno */
+    color: var(--dark-text); /* Texto claro */
+}
+
+/* Título del modal */
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilo de los botones dentro del modal */
+.modal-footer .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Botón "Cerrar" */
+.modal-footer .btn-secondary {
+    background-color: var(--footer-bg); /* Fondo marrón para el botón cerrar */
+    border-color: var(--footer-bg); /* Mismo color de borde */
+    color: var(--dark-text); /* Texto claro */
+}
+
+/* Modo oscuro para el botón "Cerrar" */
+body.dark-mode .modal-footer .btn-secondary {
+    background-color: var(--dark-bg-footer); /* Fondo oscuro para el botón cerrar */
+    border-color: var(--dark-bg-footer); /* Bordes oscuros */
+    color: var(--dark-text); /* Texto claro */
+}
+
+/* Estilo del cuerpo del modal */
+.modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color); /* Color de texto negro */
+}
+
+/* Modo oscuro para el cuerpo del modal */
+body.dark-mode .modal-body p {
+    color: var(--dark-text); /* Texto claro en modo oscuro */
+}
+
+
+/* Contenedor del botón */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el botón verticalmente (si el contenedor tiene altura) */
+    height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
+}
+
+/* Botón principal */
+.btn.btn-light {
+    background-color: var(--link-color); /* Amarillo para el fondo del botón */
+    color: var(--body-bg); /* Texto blanco */
+    font-weight: bold;
+    padding: 10px 10px; /* Mejora el padding horizontal para un botón más amplio */
+    border-radius: 5px;
+    border: 2px solid var(--link-color); /* Borde amarillo */
+    width: auto; /* El botón se ajusta al contenido */
+    display: inline-flex; /* Flexbox en el botón para mejor alineación */
+    justify-content: center; /* Centra el texto dentro del botón */
+    align-items: center; /* Alinea verticalmente el contenido */
+    text-transform: uppercase; /* Añadir transformación de texto (opcional) */
+}
+
+/* Cambio de color en el hover */
+.btn.btn-light:hover {
+    background-color: var(--button-hover-bg, #333); /* Negro para hover, usando fallback si no está definido */
+    color: var(--link-color); /* Amarillo para el texto en hover */
+    border-color: var(--link-color); /* Borde amarillo en hover */
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para darle un efecto más atractivo */
+}
+
+
+/* Estilo para la portada */
+
+.portada-imagen {
+    position: relative;
+    background-image: url('foto.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 110vh; /* Ocupa toda la pantalla */
+    text-align: justify;
+    margin-top: 0; /* Elimina cualquier espacio superior */
+    padding-top: 10px; /* Ajusta el padding superior para que no se superponga con la barra */
+    display: flex;
+    flex-direction: column;
+    justify-content: justify; /* Centra el contenido verticalmente */
+    align-items: justify; /* Centra el contenido horizontalmente */
+}
+
+.portada p {
+    font-size: 1.5em;
+    color: var(--text-color); /* Color del texto */
+    margin-top: 20px; /* Espacio superior */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Sombra sutil en el texto */
+    padding: 5px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
 body, section, nav, footer {
     margin: 0;
     padding: 0;
@@ -80,6 +213,10 @@ footer {
     text-align: left; /* Alinear texto a la izquierda */
 }
 
+.text-center p{
+    color: #ffffff;
+}
+
 .footer-content {
     display: flex; /* Usar flexbox para el contenido del footer */
     flex-direction: column; /* Organizar los elementos en columna */
@@ -87,7 +224,7 @@ footer {
 }
 
 .footer-links a {
-    color: var(--text-color); /* Color de los enlaces en el footer */
+    color: var(--dark-text); /* Color de los enlaces en el footer */
     text-decoration: none; /* Sin subrayado en los enlaces */
 }
 
@@ -462,8 +599,4 @@ body.dark-mode {
 .testimonio-content.dark-mode {
     background-color: var(--dark-box-bg); /* Color de fondo del contenedor de testimonios en modo oscuro */
     border: 2px solid var(--link-color); /* Borde del contenedor en modo oscuro */
-}
-
-.text-center p{
-    color: #ffffff;
 }
