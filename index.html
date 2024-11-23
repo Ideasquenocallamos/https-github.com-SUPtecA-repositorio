@@ -9,37 +9,79 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button id="toggle-theme-btn" class=""> <svg xmlns="https://img.icons8.com/ios-filled/50/ffffff/crescent-moon.png" viewBox="0 0 24 24" fill="#f" width="24px" height="24px">
+                <path d="M12 2c-.76 0-1.5.09-2.21.26a8 8 0 005.95 11.5 8 8 0 01-3.74 7.54A10 10 0 102 12c0-4.41 2.82-8.16 6.74-9.52A7.88 7.88 0 0012 2z"/>
+              </svg></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-scroll">
+                    <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sabias-que">Sabías que</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#que-pensamos">Qué pensamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#te-preguntamos">Te preguntamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estadisticas">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#entrevistas">Entrevistas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonio">Testimonio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
 <body>
-    
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <button id="toggle-theme-btn" class=""> <svg xmlns="https://img.icons8.com/ios-filled/50/ffffff/crescent-moon.png" viewBox="0 0 24 24" fill="#f" width="24px" height="24px">
-                    <path d="M12 2c-.76 0-1.5.09-2.21.26a8 8 0 005.95 11.5 8 8 0 01-3.74 7.54A10 10 0 102 12c0-4.41 2.82-8.16 6.74-9.52A7.88 7.88 0 0012 2z"/>
-                  </svg></button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-scroll">
-                        <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes somos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sabias-que">Sabías que</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#que-pensamos">Qué pensamos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#te-preguntamos">Te preguntamos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#estadisticas">Estadísticas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#entrevistas">Entrevistas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#testimonio">Testimonio</a></li>
-                    </ul>
+        <!-- Portada -->
+    <section class="portada-imagen">
+        <section class="portada">
+            <div class="portada-overlay">
+                <div class="portada-content">
+                    <p>Bienvenidos a la Página Acción por el Clima</p>
+                    <p>El cambio climático es uno de los mayores desafíos a los que se enfrenta la humanidad en el siglo XXI. Sus efectos, como el aumento de la temperatura global, fenómenos climáticos extremos y la pérdida de biodiversidad, ya están afectando a nuestro planeta y a las comunidades más vulnerables.</p>
+                    <p>La **ODS 13 - Acción por el Clima** busca urgentemente combatir estos efectos, impulsando políticas y soluciones que frenen el calentamiento global, protejan los ecosistemas y promuevan una economía baja en carbono.</p>
+                    <p>¡Es el momento de actuar! A través de este sitio web, te invitamos a unirte a la causa y a tomar acción para un futuro más sostenible.</p>
+                </div>
+                
+            </div>
+          
+        </section>
+
+        <div class="button-container">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalNuestroFin">
+                Ver Nuestro Objetivo
+            </button>
+        </div>  
+    </section> 
+
+        <!-- Modal: Nuestro Fin -->
+        <div class="modal fade" id="modalNuestroFin" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Nuestro Fin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El objetivo de este sitio web es crear conciencia sobre el cambio climático y fomentar acciones individuales y colectivas para combatirlo. Juntos, podemos hacer una diferencia.</p>
+                        <p>Ayudamos a las personas a comprender cómo pueden contribuir a mitigar los efectos del cambio climático, a través de la adopción de hábitos responsables y el apoyo a políticas medioambientales efectivas.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
         
     <main>
         <section id="Principal" class="section-1">
             <article class="container text-center">
                 <header>
-                    <h2>Bienvenido</h2>
+                    <h2>Flash Informativo</h2>
                     <p>Disfruta del siguiente video informativo</p>
                 </header>
                 <div class="ratio ratio-16x9">
@@ -251,23 +293,6 @@
                 <a href="https://www.example.com/encuesta" class="btn btn-primary">Participar en la Encuesta</a>
             </article>
         </section>
-
-        <div class="modal fade" id="modalNuestroFin" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel">Nuestro Fin</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>El objetivo de este sitio web es crear conciencia sobre el cambio climático y fomentar acciones individuales y colectivas para combatirlo. Juntos, podemos hacer una diferencia.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <section id="estadisticas" class="section-6">
             <article class="container">
