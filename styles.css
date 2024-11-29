@@ -804,3 +804,53 @@ body.dark-mode {
 .carousel-control-next:hover {
     background-color: #333; /* Cambia el fondo a un gris oscuro al pasar el ratón */
 }
+/* Estilos para la sección Elevator Pitch en modo oscuro */
+body.dark-mode #ElevatorPitch {
+    background-color: transparent; /* Sin fondo */
+    color: white; /* Texto blanco */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 20px 0;
+}
+
+body.dark-mode #ElevatorPitch h2 {
+    color: #f1f1f1; /* Título en blanco suave */
+}
+
+body.dark-mode #ElevatorPitch p {
+    color: #bbb; /* Párrafos en gris claro */
+}
+
+body.dark-mode #ElevatorPitch iframe {
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* Estilos para la sección Principal en modo oscuro */
+body.dark-mode #Principal {
+    background-color: transparent; /* Sin fondo */
+    color: white; /* Texto blanco */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+body.dark-mode #Principal h2 {
+    color: #f1f1f1; /* Título en blanco suave */
+}
+
+body.dark-mode #Principal p {
+    color: #bbb; /* Párrafos en gris claro */
+}
+
+body.dark-mode #Principal iframe {
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
