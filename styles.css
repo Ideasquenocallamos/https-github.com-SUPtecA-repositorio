@@ -765,7 +765,7 @@ body.dark-mode {
 
 /* Estilos para la sección Principal */
 #Principal {
-    color: black; /* Color del texto a negro */
+    color: black; /* Color del texto a negro en modo claro */
 }
 
 #Principal h2 {
@@ -783,7 +783,7 @@ body.dark-mode {
 
 /* Estilos para la sección del Elevator Pitch */
 #ElevatorPitch {
-    color: black; /* Color del texto a negro */
+    color: black; /* Color del texto a negro en modo claro */
 }
 
 #ElevatorPitch h2 {
@@ -799,58 +799,72 @@ body.dark-mode {
     color: black;
 }
 
-/* Estilo para el hover (cuando el usuario pasa el ratón) */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: #333; /* Cambia el fondo a un gris oscuro al pasar el ratón */
-}
-/* Estilos para la sección Elevator Pitch en modo oscuro */
+/* Modo oscuro: cambiar solo el color del texto a blanco */
 body.dark-mode #ElevatorPitch {
-    background-color: transparent; /* Sin fondo */
-    color: white; /* Texto blanco */
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin: 20px 0;
+    color: white; /* Texto blanco en modo oscuro */
 }
 
 body.dark-mode #ElevatorPitch h2 {
-    color: #f1f1f1; /* Título en blanco suave */
+    color: white; /* Título en blanco en modo oscuro */
 }
 
 body.dark-mode #ElevatorPitch p {
-    color: #bbb; /* Párrafos en gris claro */
+    color: white; /* Párrafos en blanco en modo oscuro */
 }
 
-body.dark-mode #ElevatorPitch iframe {
-    border-radius: 8px;
-    width: 100%;
-    height: 400px;
-    border: none;
+body.dark-mode #ElevatorPitch a {
+    color: white; /* Enlaces en blanco en modo oscuro */
 }
 
-/* Estilos para la sección Principal en modo oscuro */
+/* Modo oscuro: cambiar solo el color del texto a blanco */
 body.dark-mode #Principal {
-    background-color: transparent; /* Sin fondo */
-    color: white; /* Texto blanco */
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
+    color: white; /* Texto blanco en modo oscuro */
 }
 
 body.dark-mode #Principal h2 {
-    color: #f1f1f1; /* Título en blanco suave */
+    color: white; /* Título en blanco en modo oscuro */
 }
 
 body.dark-mode #Principal p {
-    color: #bbb; /* Párrafos en gris claro */
+    color: white; /* Párrafos en blanco en modo oscuro */
 }
 
-body.dark-mode #Principal iframe {
-    border-radius: 8px;
-    width: 100%;
-    height: 400px;
-    border: none;
+body.dark-mode #Principal a {
+    color: white; /* Enlaces en blanco en modo oscuro */
 }
+
+/* Estilos para la sección #que-pensamos en modo claro */
+#que-pensamos {
+    color: black; /* Color del texto a negro */
+}
+
+#que-pensamos h2 {
+    color: black; /* Asegura que el título también sea negro */
+}
+
+#que-pensamos p {
+    color: black; /* Asegura que el párrafo también sea negro */
+}
+
+#que-pensamos a {
+    color: black; /* Enlaces en negro */
+}
+
+/* Modo oscuro: cambiar solo el color del texto a blanco */
+body.dark-mode #que-pensamos {
+    color: white; /* Texto blanco en modo oscuro */
+}
+
+body.dark-mode #que-pensamos h2 {
+    color: white; /* Título en blanco en modo oscuro */
+}
+
+body.dark-mode #que-pensamos p {
+    color: white; /* Párrafos en blanco en modo oscuro */
+}
+
+body.dark-mode #que-pensamos a {
+    color: white; /* Enlaces en blanco en modo oscuro */
+}
+
 
