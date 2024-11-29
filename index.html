@@ -36,27 +36,25 @@
 
 
 <body>
-        <!-- Portada -->
-    <section class="portada-imagen">
-        <section class="portada">
-            <div class="portada-overlay">
-                <div class="portada-content">
-                    <p>Bienvenidos a la Página Acción por el Clima</p>
-                    <p>El cambio climático es uno de los mayores retos del siglo XXI. Sus efectos, como el aumento de las temperaturas, fenómenos extremos y la pérdida de biodiversidad, ya están afectando a nuestro planeta y a las poblaciones más vulnerables.</p>
-                    <p>La ODS 13 - Acción por el Clima tiene como objetivo frenar estos efectos mediante políticas que reduzcan el calentamiento global, protejan los ecosistemas y promuevan una economía sostenible</p>
-                    <p>¡Es hora de actuar! Únete a esta causa a través de este sitio web y contribuye a un futuro más verde y sostenible</p>
-                </div>
-                
-            </div>
-          
-        </section>
 
-        <div class="button-container">
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalNuestroFin">
-                Ver Nuestro Objetivo
-            </button>
-        </div>  
-    </section> 
+        
+    <main>
+
+        
+        <section class="portada-slider">
+            <!-- Superposición oscura sobre la imagen -->
+            <div class="portada-overlay">
+                <!-- Descripción en la parte inferior -->
+                <div class="portada-description">
+                    <img src="clima.jpg" alt="Imagen relacionada con el clima">
+                    <p class="titulo">Bienvenidos a la Página Acción por el Clima</p>
+                    <p>El cambio climático es uno de los mayores retos del siglo XXI. Sus efectos, como el aumento de las temperaturas, fenómenos extremos y la pérdida de biodiversidad, ya están afectando a nuestro planeta y a las poblaciones más vulnerables.</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#modalNuestroFin">
+                        Ver Nuestro Objetivo
+                    </button>
+                </div>
+            </div>
+        </section>        
     
         <!-- Modal: Nuestro Fin -->
         <div class="modal fade" id="modalNuestroFin" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
@@ -76,8 +74,7 @@
                 </div>
             </div>
         </div>
-        
-    <main>
+
         <section id="Principal" class="section-1">
             <article class="container text-center">
                 <header>
@@ -96,54 +93,76 @@
                 <p>En este video, se presenta una entrevista clave que aborda temas fundamentales sobre el cambio climático y la importancia de la acción colectiva.</p>
             </article>
         </section>
-        <section id="quienes-somos" class="section-2">
+
+        <section id="ElevatorPitch" class="section-1">
+            <article class="container text-center">
+                <header>
+                    <h2>Elevator Pitch</h2>
+                    <p>Conoce nuestra propuesta en un minuto</p>
+                </header>
+                <div class="ratio ratio-16x9">
+                    <!-- Corregido el URL del iframe con el formato de embed -->
+                    <iframe src="https://www.youtube.com/embed/1W4JpPX_UIc" 
+                        title="Elevator Pitch"  
+                        frameborder="0"  
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Este breve video presenta nuestra propuesta de valor, destacando los puntos clave que nos definen y el impacto positivo que buscamos generar.</p>
+            </article>
+        </section>
+        
+        
+
+        <section id="quienes-somos" class="section-2"> 
             <article class="container">
                 <h2>Quiénes Somos</h2>
                 <p>Estudiantes de Tecsup del II ciclo de la carrera Diseño y Desarrollo de Software.</p>
                 <div class="row">
                     <article class="col-md-4 mb-4">
-                        <figure class="card rounded">
-                            <img src="Marco.jpg" class="card-img-top rounded" alt="Marco Nurena Asencio">
+                        <figure class="card custom-card">
+                            <img src="Marco.jpg" class="card-img-top custom-card-img" alt="Marco Nurena Asencio">
                             <figcaption class="card-body">
                                 <p class="card-text">Marco Nurena Asencio</p>
                             </figcaption>
                         </figure>
                     </article>
                     <article class="col-md-4 mb-4">
-                        <figure class="card">
-                            <img src="mauro.jpg" class="card-img-top" alt="Mauricio Brad Wilson">
+                        <figure class="card custom-card">
+                            <img src="mauro.jpg" class="card-img-top custom-card-img" alt="Mauricio Brad Wilson">
                             <figcaption class="card-body">
                                 <p class="card-text">Mauricio Brad Wilson</p>
                             </figcaption>
                         </figure>
                     </article>
                     <article class="col-md-4 mb-4">
-                        <figure class="card">
-                            <img src="Felix.jpg" class="card-img-top" alt="Felix Diaz Bernabe">
+                        <figure class="card custom-card">
+                            <img src="Felix.jpg" class="card-img-top custom-card-img" alt="Felix Diaz Bernabe">
                             <figcaption class="card-body">
                                 <p class="card-text">Felix Diaz Bernabe</p>
                             </figcaption>
                         </figure>
                     </article>
                     <article class="col-md-4 mb-4">
-                        <figure class="card">
-                            <img src="GRISSELfoto.jpeg" class="card-img-top" alt="Grissel LLican Correa">
+                        <figure class="card custom-card">
+                            <img src="GRISSELfoto.jpeg" class="card-img-top custom-card-img" alt="Grissel LLican Correa">
                             <figcaption class="card-body">
                                 <p class="card-text">Grissel LLican Correa</p>
                             </figcaption>
                         </figure>
                     </article>
                     <article class="col-md-4 mb-4">
-                        <figure class="card">
-                            <img src="RENEfoto.jpeg" class="card-img-top" alt="Josefina Grado Reyes">
+                        <figure class="card custom-card">
+                            <img src="RENEfoto.jpeg" class="card-img-top custom-card-img" alt="Josefina Grado Reyes">
                             <figcaption class="card-body">
                                 <p class="card-text">Josefina Grado Reyes</p>
                             </figcaption>
                         </figure>
                     </article>
                     <article class="col-md-4 mb-4">
-                        <figure class="card">
-                            <img src="ANDERfoto.jpeg" class="card-img-top" alt="Fabricio Guevara Benites">
+                        <figure class="card custom-card">
+                            <img src="ANDERfoto.jpeg" class="card-img-top custom-card-img" alt="Fabricio Guevara Benites">
                             <figcaption class="card-body">
                                 <p class="card-text">Fabricio Guevara Benites</p>
                             </figcaption>
@@ -152,7 +171,7 @@
                 </div>
             </article>
         </section>
-
+        
         <section id="sabias-que" class="section-3 py-5">   
             <article class="container">
                 <h2 class="text-center mb-4">Sabías que...</h2>
@@ -196,7 +215,7 @@
                                 <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#sabiasQueAccordion">
                                     <div class="accordion-body">
                                         <p>Los océanos están siendo gravemente afectados por el cambio climático. Uno de los efectos más visibles es la acidificación de los océanos...</p>
-                                        <a href="https://www.noaa.gov/education/resource-collections/ocean-acidification" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                        <a href="https://www.fundacionaquae.org/wiki/el-agujero-de-la-capa-de-ozono-y-el-cambio-climatico-malos-aliados-para-los-oceanos/amp/?gad_source=1&gclid=CjwKCAiA6aW6BhBqEiwA6KzDc2r-TKsK3fhnBz3JSJ-Gs4RVsCyoIafTwpuSl1YRSDtngwTFj2jjohoCkAUQAvD_BwE" target="_blank" rel="noopener noreferrer">Leer más</a>
                                     </div>
                                 </div>
                             </div>
@@ -238,7 +257,7 @@
                                 <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#sabiasQueAccordion">
                                     <div class="accordion-body">
                                         <p>La educación y la concientización sobre el cambio climático son esenciales para mitigar sus efectos...</p>
-                                        <a href="https://www.unesco.org/en/climate-change-education" target="_blank" rel="noopener noreferrer">Leer más</a>
+                                        <a href="https://www.unesco.org/es/climate-change/education#:~:text=La%20educaci%C3%B3n%20sobre%20el%20cambio%20clim%C3%A1tico%20ayuda%20a%20que%20las,actuar%20como%20agentes%20del%20cambio." target="_blank" rel="noopener noreferrer">Leer más</a>
                                     </div>
                                 </div>
                             </div>
