@@ -122,32 +122,91 @@ body.dark-mode .modal-body p {
 }
 
 
-/* Estilo para la portada */
-
-.portada-imagen {
+/* Estilo general de la portada-slider */
+.portada-slider {
     position: relative;
-    background-image: url('foto.jpg'); /* Aquí usas la función url() */    background-size: cover;
-    background-position: center;
-    height: 110vh; /* Ocupa toda la pantalla */
-    text-align: justify;
-    margin-top: 0; /* Elimina cualquier espacio superior */
-    padding-top: 10px; /* Ajusta el padding superior para que no se superponga con la barra */
+    background-image: url('ruta_de_la_imagen.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
     display: flex;
     flex-direction: column;
-    justify-content: justify; /* Centra el contenido verticalmente */
-    align-items: justify; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto en la sección */
 }
 
-.portada p {
-    font-size: 1.5em;
-    color: var(--text-color); /* Color del texto */
-    margin-top: 20px; /* Espacio superior */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Sombra sutil en el texto */
-    padding: 5px;
-    padding-left: 100px;
-    padding-right: 100px;
+.portada-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Gradiente de negro con transparencia */
+    z-index: 1; 
 }
 
+
+
+/* Cuadro de descripción en la parte inferior */
+.portada-description {
+    position: absolute;
+    bottom: 0; /* Fijado en la parte inferior de la pantalla */
+    width: 100%; /* Ocupa todo el ancho */
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto horizontalmente */
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); /* Sombra para crear efecto de elevación */
+    z-index: 2; /* Asegura que esté sobre la superposición */
+}
+
+/* Estilo del título */
+.portada-description .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilo del texto en la descripción */
+.portada-description p {
+    margin: 10px 0; /* Espaciado entre párrafos */
+    font-size: 1rem; /* Tamaño de texto base */
+    line-height: 1.5; /* Altura de línea */
+}
+
+/* Estilo del botón en la descripción */
+.portada-description .btn {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+}
+
+.portada-description .btn:hover {
+    background-color: #f1f1f1; /* Fondo más claro al pasar el cursor */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .portada-description {
+        padding: 15px; /* Reduce el espaciado interno */
+    }
+
+    .portada-description p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+
+    .portada-description .btn {
+        font-size: 0.9rem; /* Ajusta el tamaño del botón */
+        padding: 8px 15px; /* Ajusta el espaciado interno del botón */
+    }
+}
 
 body, section, nav, footer {
     margin: 0;
@@ -265,22 +324,85 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea superior */
 }
 
+/* Estilos para la sección #sabias-que */
+#sabias-que .card-img-top {
+    width: 100%;
+    height: auto; /* Ajusta la altura manteniendo las proporciones */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    max-height: 100%; /* Evita que la imagen se desborde */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+
+/* Si quieres que las imágenes dentro de #sabias-que se recorten en algunos casos */
+#sabias-que .card-img-top.recortada {
+    object-fit: cover; /* Recorta la imagen para cubrir el contenedor */
+    height: 100%; /* Asegura que la imagen cubra toda la altura */
+}
+
+/* Estilo general para las tarjetas */
+.custom-card {
+    background-color: var(--box-bg); /* Color de fondo */
+    border: 1px solid var(--link-color); /* Borde de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.custom-card-img {
+    width: 100%;
+    height: 200px; /* Establecer una altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    object-position: center; /* Centra la imagen */
+}
+
+/* Asegurar que el contenido de la tarjeta tenga el mismo tamaño y comportamiento */
+.custom-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 15px;
+}
+
+.custom-card .card-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .custom-card-img {
+        height: 150px; /* Reducir la altura de las imágenes en pantallas pequeñas */
+    }
+}
+
+
 /* Estilos para tarjetas */
 .card {
     background-color: var(--box-bg); /* Color de fondo de la tarjeta */
     border: 1px solid var(--link-color); /* Borde de la tarjeta */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
     transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
     transform: scale(1.05); /* Aumentar el tamaño de la tarjeta al pasar el ratón por encima */
 }
 
-.card img {
-    height: 200px; /* Altura de la imagen en la tarjeta */
-    object-fit: cover; /* Ajustar la imagen para cubrir el área */
+.card-img-top {
+    width: 100%;
+    height: auto; /* Ajuste automático de la altura manteniendo las proporciones */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    max-height: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    object-position: center; /* Centra la imagen en el contenedor */
 }
+
 
 /* Estilos para botones */
 button {
@@ -633,6 +755,48 @@ body.dark-mode {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: #000; /* Color blanco para el ícono */
+}
+
+/* Estilo para el hover (cuando el usuario pasa el ratón) */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #333; /* Cambia el fondo a un gris oscuro al pasar el ratón */
+}
+
+/* Estilos para la sección Principal */
+#Principal {
+    color: black; /* Color del texto a negro */
+}
+
+#Principal h2 {
+    color: black; /* Asegura que el título también sea negro */
+}
+
+#Principal p {
+    color: black; /* Asegura que el párrafo también sea negro */
+}
+
+/* Si hay enlaces en la sección Principal, también los cambia a negro */
+#Principal a {
+    color: black;
+}
+
+/* Estilos para la sección del Elevator Pitch */
+#ElevatorPitch {
+    color: black; /* Color del texto a negro */
+}
+
+#ElevatorPitch h2 {
+    color: black; /* Asegura que el título también sea negro */
+}
+
+#ElevatorPitch p {
+    color: black; /* Asegura que el párrafo también sea negro */
+}
+
+/* Si hay enlaces en la sección ElevatorPitch, también los cambia a negro */
+#ElevatorPitch a {
+    color: black;
 }
 
 /* Estilo para el hover (cuando el usuario pasa el ratón) */
